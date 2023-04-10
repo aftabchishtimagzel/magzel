@@ -1,6 +1,6 @@
 import React from 'react'
 import slide from '../../images/home-background.jpg'
-import { Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 
 
 function SliderMain() {
@@ -11,7 +11,7 @@ function SliderMain() {
         alt="Artist"
         style={{
           width: '100%',
-          height: '40vh',
+          height: '70vh',
           objectFit: 'cover',
         }}
       />
@@ -21,7 +21,7 @@ function SliderMain() {
           top: '0',
           left: '0',
           width: '100%',
-          height: '40vh',
+          height: '70vh',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           display: 'flex',
           alignItems: 'center',
@@ -29,14 +29,23 @@ function SliderMain() {
           flexDirection: 'column',
         }}
       >
+        <Box width={'50%'}>
+          <Typography variant="h2" style={{ color: '#fff', marginBottom: '1rem', fontWeight: '800' }}>
+            Custom Software
+            Development Compan
+          </Typography>
+          <Typography variant="body1" style={{ color: '#fff', fontSize:'1.875em' }}>
+            Helping small and medium<br></br> businesses navigate the digital world
+          </Typography>
+          <Button variant="contained" sx={{
+            bgcolor: '  #db5156', color: 'white', padding: '14.5px 64.5px', borderRadius:'64px', ":hover": {
+              bgcolor: '  #db5156'
+            }
+          }}> Let's talk</Button>
+        
+        </Box>
 
-        <Typography variant="h2" style={{ color: '#fff', marginBottom: '1rem', fontWeight: '800' }}>
-          Custom Software
-          Development Compan
-        </Typography>
-        <Typography variant="body1" style={{ color: '#fff' }}>
-          Helping small and medium businesses navigate the digital world
-        </Typography>
+       
 
       </div>
     </div>

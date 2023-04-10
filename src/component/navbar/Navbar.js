@@ -78,6 +78,13 @@ function Header(props) {
                                 </Link>
                         ))}
                     </Box>
+                    <Box>
+                        <Button variant="contained" sx={{
+                            bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px', borderRadius: '64px', ":hover": {
+                                bgcolor: '  #db5156'
+                            }
+                        }}>Contact Us</Button>
+                    </Box>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
