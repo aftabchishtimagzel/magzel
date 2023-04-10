@@ -11,10 +11,11 @@ function SliderMain() {
         alt="Artist"
         style={{
           width: '100%',
-          height: '70vh',
+          height: '80vh',
           objectFit: 'cover',
         }}
       />
+    
       <div
         style={{
           position: 'absolute',
@@ -22,7 +23,7 @@ function SliderMain() {
           left: '0',
           width: '100%',
           height: '70vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          // backgroundColor: 'rgba(0, 0, 0, 0.5)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
