@@ -29,6 +29,6 @@ export const navItems = [
     {
         id: 6,
         title: "Blog",
-        url: "/",
+        url: "/blog",
     }
 ]
