@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 
@@ -40,14 +40,16 @@ const BlogCard=(props)=> {
             {props.title}
      
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography height={"150px"} variant="body2" color="text.secondary">
       
             {isReadMore ? props.des.slice(0, 150) : props.des}
             
         
- {
+<Box mt={1}>
+{
     isReadMore ? <Button onClick={toggleReadMore} variant='outlined'>read more</Button> :<Button onClick={toggleReadMore} variant='outlined'>show less</Button>
  }
+</Box>
           </Typography>
         </CardContent>
       </CardActionArea>
