@@ -28,9 +28,12 @@ function Services() {
                         ":hover": {
                             boxShadow: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px'
                     }}}>
-                        <CardContent>
+                                <CardContent>
+                                    <Box mb={2} sx={{ color: '#f5a00a' }}>
+                                        {item.icon}
+                                    </Box>
                             <Typography variant="h3" component="div" sx={{
-                                fontSize: '1.875em',
+                                fontSize: '1.675em',
                                 lineHeight: '120%',
                                 // wordSpacing: '100vw',
                                 fontWeight:'600'
@@ -41,7 +44,7 @@ function Services() {
                             <Typography variant="body2" sx={{
                                 fontSize: '1.125em',
                                  marginTop: ' 20px',
-                                 height:'80px',
+                                 height:'120px',
                                 letterSpacing: '.002em',
                                 marginBottom: '10px',
                                 lineHeight:'150%'
