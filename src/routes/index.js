@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "../component/navbar/Navbar";
 import { privateRoutes } from "./routesData";
+import Footer from "../component/footer/Footer";
 
 const Routing = () => {
     return (
@@ -19,6 +20,8 @@ const Routing = () => {
                     ))
                    }
             </Routes>
+            {/* footer */}
+            <Footer/>
            
         </>
     );

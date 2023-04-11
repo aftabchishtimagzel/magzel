@@ -60,7 +60,7 @@ function Award() {
             <Grid container width={'70%'} mx={'auto'} spacing={2} mt={2}  pb={5}>
                     {award.map((item) => {
                     return (
-                        <Grid item md="2.4" >
+                        <Grid item md="2.4" sm={4}  xs={6}>
                             <Box>
                                 <img src={item.url} alt="" width={"100%"}  height={"auto"}/>
                             </Box>

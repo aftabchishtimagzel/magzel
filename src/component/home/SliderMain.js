@@ -30,19 +30,24 @@ function SliderMain() {
           flexDirection: 'column',
         }}
       >
-        <Box width={'50%'}>
-          <Typography variant="h2" style={{ color: '#fff', marginBottom: '1rem', fontWeight: '800' }}>
-            Custom Software
-            Development Compan
+        <Box width={{ md: '50%', xs:'90%'}}>
+          <Typography variant="h3" style={{ color: '#fff', marginBottom: '1rem', fontWeight:{md:'800',xs:'500'} }}>
+            Custom Software<br></br>
+            Development Company
           </Typography>
+          <Typography variant="h5" style={{ color: '#fff', marginBottom: '1rem', fontWeight: { md: '800', xs: '500' } }}>
+            We are Experienced in the development of BlockchainWeb 3.0AppsWeb
+          </Typography>
+         
           <Typography variant="body1" style={{ color: '#fff', fontSize:'1.875em' }}>
-            Helping small and medium<br></br> businesses navigate the digital world
+          
+            Magzel is one of the pioneers in web 3.0 development
           </Typography>
           <Button variant="contained" sx={{
-            bgcolor: '  #db5156', color: 'white', padding: '14.5px 64.5px', borderRadius:'64px', ":hover": {
+            bgcolor: '  #db5156', color: 'white',marginTop:'10px', padding: '14.5px 64.5px', borderRadius:'64px', ":hover": {
               bgcolor: '  #db5156'
             }
-          }}> Let's talk</Button>
+          }} > Let's talk</Button>
         
         </Box>
 

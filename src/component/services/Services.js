@@ -1,22 +1,28 @@
-import { Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material'
 import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import servicesdata from './Data';
 function Services() {
     return (
         <>
-            <Typography mt={3} variant='h2' sx={{
+            <Typography paddingTop={3} variant='h2' sx={{
                 fontWeight:'700',textAlign:'center'
             }} pt={5}>
                 Services we provide
             </Typography>
+            <Box width={'70%'} mx={'auto'}  mt={2} >
+                <Typography variant='p' >
+                    We have a refined process after we have taken up a project. We offer the platform from where the projects take shape through stages of planning, testing and execution. In this aspect, we follow an agile methodology and run the project through a loop of feedback and constant improvement. We provide services like web 3.0 development and digital marketing services. Some of the services below are the following...
+                </Typography>
+            </Box>
+          
 
             {/*==================service card============== */}
             
-            <Grid container width={'80%'} mx={'auto'} spacing={2} mt={2} pb={5} >
+            <Grid container width={'70%'} mx={'auto'} spacing={2} mt={2} pb={5} >
                 {servicesdata.map((item) => {
                     return (
-                <Grid item md="4" >
+                <Grid item md="4"  sm='6' xs="12">
                     <Card  sx={{
                         cursor: 'pointer', padding: '10px',borderRadius:'15px',
                         ":hover": {
@@ -26,7 +32,7 @@ function Services() {
                             <Typography variant="h3" component="div" sx={{
                                 fontSize: '1.875em',
                                 lineHeight: '120%',
-                                wordSpacing: '100vw',
+                                // wordSpacing: '100vw',
                                 fontWeight:'600'
                           }}>
                             {item.title}
@@ -34,10 +40,10 @@ function Services() {
 
                             <Typography variant="body2" sx={{
                                 fontSize: '1.125em',
-                                        marginTop: ' 27px',
-                                height:'100px',
+                                 marginTop: ' 20px',
+                                 height:'80px',
                                 letterSpacing: '.002em',
-                                marginBottom: '28px',
+                                marginBottom: '10px',
                                 lineHeight:'150%'
                               
                         }} >
