@@ -40,6 +40,10 @@ const Contact = () => {
            url:require('../../images/it_services2.png')
         },
         {
+            id: 1,
+           url:require('../../images/clutch.png')
+        },
+        {
             id: 6,
            url:require('../../images/clutch3.png')
         }, 
@@ -60,8 +64,8 @@ const Contact = () => {
 Book a free consultation with tech experts</h3>
  </Box>
   
-    <Stack direction={{xs:"column",md:"row"}} width={{xs:"100%",md:"70%"}} mx="auto" p={2}>
-<Stack width={{xs:"100%",md:"50%"}}>
+    <Stack direction={{xs:"column",md:"row"}} width={{xs:"100%",md:"70%"}} mx="auto" p={2} justifyContent={"space-between"}>
+<Stack width={{xs:"100%",md:"40%"}}>
 <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -135,7 +139,7 @@ Book a free consultation with tech experts</h3>
         
           </Box>
 </Stack>
-<Grid container >
+<Grid container width={{xs:"100%",md:"50%"}} >
 <Grid item xs={12} md={12} >
 {
     award.map((action)=>{
