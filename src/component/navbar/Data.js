@@ -4,12 +4,12 @@ export const navItems = [
     {
         id: 1,
         title: "Industries",
-        url: "/",
+        url: "/industries",
     },
     {
         id: 2,
         title: "Services",
-        url: "/",
+        url: "/services",
     },
     {
         id: 3,

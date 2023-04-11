@@ -42,6 +42,14 @@ function Header(props) {
                     </Link>
                 ))}
 
+                <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                    <Button variant="contained" sx={{
+                        bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px', borderRadius: '64px', ":hover": {
+                            bgcolor: '  #db5156'
+                        }
+                    }}>Contact Us</Button>
+                </Box>
+
 
             </List>
         </Box>
@@ -52,50 +60,53 @@ function Header(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ backgroundColor: 'black', color: 'white'}}  >
-                <Toolbar sx={{ width: { sx: '100%', sm: '100%', md: '60%' } }} mx={'auto'}>   
-                  
-                    <Box
-                        variant="h5"
-                        sx={{ flexGrow: 1 }}
-                   >
-                        <Link to='/' style={{
-                            textDecoration: 'none',
-                            color:'white'
-                    }}>
-                      
-                            Magzel
-                         </Link>
-                    </Box>
-                   
-                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                        
-                        {navItems.map(({ id, title, url }) => (
-                            <Link style={{ color: 'white', textDecoration: 'none' }} key={id} to={url}>
-                            <Button sx={{ color: '#fff' }} >
-                                    {title}
-                                </Button>
+            <AppBar component="nav" sx={{ backgroundColor: 'black', color: 'white' }} >
+                <Box sx={{ width: { xs: '100%', sm: '100%', md: '70%' } }} mx="auto">
+                    <Toolbar  >
+
+                        <Box
+                            variant="h5"
+                            sx={{ flexGrow: 1 }}
+                        >
+                            <Link to='/' style={{
+                                textDecoration: 'none',
+                                color: 'white'
+                            }}>
+
+                                Magzel
+                            </Link>
+                        </Box>
+
+                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+
+                            {navItems.map(({ id, title, url }) => (
+                                <Link style={{ color: 'white', textDecoration: 'none' }} key={id} to={url}>
+                                    <Button sx={{ color: '#fff' }} >
+                                        {title}
+                                    </Button>
                                 </Link>
-                        ))}
-                    </Box>
-                    
-                    <Box>
-                        <Button variant="contained" sx={{
-                            bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px', borderRadius: '64px', ":hover": {
-                                bgcolor: '  #db5156'
-                            }
-                        }}>Contact Us</Button>
-                    </Box>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { md: 'none' } }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                </Toolbar>
+                            ))}
+                        </Box>
+
+                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Button variant="contained" sx={{
+                                bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px', borderRadius: '64px', ":hover": {
+                                    bgcolor: '  #db5156'
+                                }
+                            }}>Contact Us</Button>
+                        </Box>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={handleDrawerToggle}
+                            sx={{ mr: 2, display: { md: 'none' } }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                    </Toolbar>
+                </Box>
+              
             </AppBar>
             <Box component="nav">
                 <Drawer

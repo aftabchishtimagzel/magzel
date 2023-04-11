@@ -44,7 +44,7 @@ function Ceo() {
     };
 
     return (
-        <Box mt={ 5 } >
+        <Box mt={ 5 }  >
            
 
             <AutoPlaySwipeableViews
@@ -56,7 +56,7 @@ function Ceo() {
                 {images.map((item, index) => (
                     <div key={index}>
                         {Math.abs(activeStep - index) <= 2 ? (
-                            <Grid container width={"60%"} mx="auto" spacing={2}>
+                            <Grid container width={"70%"} mx="auto" spacing={2}>
 
                                 
                                 <Grid item md='4'>

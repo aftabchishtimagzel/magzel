@@ -4,18 +4,18 @@ import indestriesdata from './Data';
 function Indestries() {
     return (
         <>
-            <Typography mt={3} variant='h2' sx={{
+            <Typography pt={3} variant='h2' sx={{
                 fontWeight: '700', textAlign: 'center'
-            }} pt={5}>
+            }} paddingTop={5}>
                 Our Industries
             </Typography>
 
             {/*==================service card============== */}
 
-            <Grid container width={'80%'} mx={'auto'} spacing={2} mt={2} pb={5} >
+            <Grid container width={'70%'} mx={'auto'} spacing={2} mt={2} pb={5} >
                 {indestriesdata.map((item) => {
                     return (
-                        <Grid item md="4" >
+                        <Grid item md="4" sm='6' xs="12">
                             <Card sx={{
                                 cursor: 'pointer', padding: '10px', borderRadius: '15px',
                                 ":hover": {
