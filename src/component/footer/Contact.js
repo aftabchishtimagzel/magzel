@@ -54,14 +54,14 @@ const Contact = () => {
     ]
   return (
     <>
- <Box sx={{textAlign:"center"}}>
+ <Box sx={{textAlign:"center"}} p={1}>
  <h1>Have a project in mind?</h1>
     <h3>
 Book a free consultation with tech experts</h3>
  </Box>
   
-    <Stack direction={{xs:"column",md:"row"}} width={{xs:"100%",md:"70%"}} mx="auto">
-<Stack width={"50%"}>
+    <Stack direction={{xs:"column",md:"row"}} width={{xs:"100%",md:"70%"}} mx="auto" p={2}>
+<Stack width={{xs:"100%",md:"50%"}}>
 <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -136,11 +136,11 @@ Book a free consultation with tech experts</h3>
           </Box>
 </Stack>
 <Grid container >
-<Grid item md={12} >
+<Grid item xs={12} md={12} >
 {
     award.map((action)=>{
         return(
-            <img src={action.url} alt="image"/>
+            <img style={{width:"180px"}} src={action.url} alt="image"/>
         )
     })
 }
