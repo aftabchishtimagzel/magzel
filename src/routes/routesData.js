@@ -1,5 +1,6 @@
 
 import Blog from "../pages/blog/Blog";
+import MainCompany from "../pages/company/MainCompany";
 import Home from "../pages/home/Home";
 import Indestry from "../pages/indestries/Indestry";
 import Service from "../pages/services/Service";
@@ -26,6 +27,9 @@ export const privateRoutes = [
         path: "/blog",
         element: <Blog/>,
     },
-    
+    {
+        path: "/company",
+        element: <MainCompany/>,
+    },
 ]
 

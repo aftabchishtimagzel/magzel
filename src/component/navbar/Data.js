@@ -24,7 +24,7 @@ export const navItems = [
     {
         id: 5,
         title: "Company",
-        url: "/",
+        url: "/company",
     },
     {
         id: 6,

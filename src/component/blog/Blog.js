@@ -54,16 +54,16 @@ export default function BasicTabs() {
     
     <Stack sx={{ width:{xs:"100%",md:'70%' }}} mx={"auto"} justifyContent={"space-between"}>
    
-    <Stack sx={{ borderBottom: 1, borderColor: 'divider' }} direction={"row"} justifyContent={"space-between"}>
+    <Stack sx={{ borderBottom: 1, borderColor: 'divider' }} direction={{xs:"column",md:"row"}} justifyContent={"space-between"}>
    
-<Stack  marginTop={2}>
+<Stack  marginTop={2} p={1}>
 <input style={{border:"none",padding:"7px",borderRadius:"15px"}} type="text" placeholder='find Article...'/>
   
 
 </Stack>
     
      <Box>
-     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+     <Tabs  variant="scrollable" scrollButtons="auto"   allowScrollButtonsMobile value={value} onChange={handleChange} aria-label="basic tabs example">
         
         <Tab label="Latest " {...a11yProps(0)} />
         <Tab label="Tech" {...a11yProps(1)} />

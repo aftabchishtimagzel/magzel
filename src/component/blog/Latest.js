@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogCard from './Card'
+import BlogCard from '../../layout/card/Card'
 import Data from './CardData'
 import { Grid } from '@mui/material'
 
