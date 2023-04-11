@@ -30,8 +30,8 @@ function SliderMain() {
           flexDirection: 'column',
         }}
       >
-        <Box width={{ md: '50%', xs:'90%'}}>
-          <Typography variant="h3" style={{ color: '#fff', marginBottom: '1rem', fontWeight:{md:'800',xs:'500'} }}>
+        <Box width={{ md: '70%', xs:'90%'}}>
+          <Typography variant="h2" style={{ color: '#fff', marginBottom: '1rem', fontWeight:{md:'800',xs:'500'} }}>
             Custom Software<br></br>
             Development Company
           </Typography>

@@ -46,9 +46,11 @@ function Stories() {
 
     return (
         <Box sx={{background:'white'}}>
-            <Typography mt={3} mb={4} variant='h2' sx={{
-                fontWeight: '700', textAlign: 'center'
-            }} pt={5}>
+            <Typography mt={3} mb={5} variant='h2' sx={{
+                fontWeight: '700', textAlign: 'center', fontSize: {
+                    xs:'30px',md:'60px'
+                }
+            }} pt={5} >
                 Success Stories
             </Typography>
 
@@ -61,18 +63,23 @@ function Stories() {
                 {images.map((item, index) => (
                     <div key={index}>
                         {Math.abs(activeStep - index) <= 2 ? (
-                            <Grid container width={"60%"} mx="auto" spacing={2}>
+                            <Grid container width={{md:'70%',xs:'80'}} mx="auto" spacing={2}>
                               
-                                <Grid item md="6">
+                                <Grid item md="6" xs={12}>
                                     <Typography variant="h5" component="div" sx={{
                                         // fontSize: '1.875em',
+                                        width: { xs: '90%', md: '100%' },
+                                        mx: 'auto',
                                         lineHeight: '120%',
                                         fontWeight: '600'
+                                        
                                     }}>
                                         {item.title}
                                     </Typography>
 
                                     <Typography variant="body2" sx={{
+                                        width: { xs: '90%', md: '100%' },
+                                       mx:'auto',
                                         fontSize: '1.125em',
                                         marginTop: ' 27px',
                                         letterSpacing: '.002em',
@@ -86,13 +93,13 @@ function Stories() {
                                         color: '#db517c', gap: '4px', fontSize: '16px'
                                     }} mt={2}>Learn More  <ArrowRightAltIcon sx={{ fontSize: '40px' }} /></Button>
                                 </Grid>
-                                <Grid item md="6">
-                                    <Stack direction="row" spacing={2}>
+                                <Grid item md="6" xs={12} order={{xs:-1,md:0}}>
+                                    <Stack direction="row" spacing={2} width={{xs:'70%',md:'100%'}} mx={'auto'}>
                                         <Box>
                                             <img
 
                                                 style={{
-                                                    height: 500,
+                                                    height: { xs: 300, md: 500 },
                                                     display: 'block',
                                                     overflow: 'hidden',
                                                     width: '100%',
@@ -106,7 +113,7 @@ function Stories() {
 
                                                 style={{
                                                     marginTop:'40px',
-                                                    height: 500,
+                                                    height:{xs:300,md:500},
                                                     display: 'block',
                                                     overflow: 'hidden',
                                                     width: '100%',

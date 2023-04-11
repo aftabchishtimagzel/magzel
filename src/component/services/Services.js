@@ -6,20 +6,22 @@ function Services() {
     return (
         <>
             <Typography paddingTop={3} variant='h2' sx={{
-                fontWeight:'700',textAlign:'center'
+                fontWeight: '700', textAlign: 'center', fontSize: {
+                    xs: '30px', md: '60px'
+                }
             }} pt={5}>
                 Services we provide
             </Typography>
-            <Box width={'70%'} mx={'auto'}  mt={2} >
+            {/* <Box width={'70%'} mx={'auto'}  mt={2} >
                 <Typography variant='p' >
                     We have a refined process after we have taken up a project. We offer the platform from where the projects take shape through stages of planning, testing and execution. In this aspect, we follow an agile methodology and run the project through a loop of feedback and constant improvement. We provide services like web 3.0 development and digital marketing services. Some of the services below are the following...
                 </Typography>
-            </Box>
+            </Box> */}
           
 
             {/*==================service card============== */}
             
-            <Grid container width={'70%'} mx={'auto'} spacing={2} mt={2} pb={5} >
+            <Grid container width={{ md: '70%', xs: '90%' }} mx={'auto'} spacing={2} mt={2} pb={5} >
                 {servicesdata.map((item) => {
                     return (
                 <Grid item md="4"  sm='6' xs="12">
@@ -40,7 +42,7 @@ function Services() {
                           }}>
                             {item.title}
                         </Typography>
-
+                                
                             <Typography variant="body2" sx={{
                                 fontSize: '1.125em',
                                  marginTop: ' 20px',
