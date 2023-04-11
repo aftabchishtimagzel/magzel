@@ -14,21 +14,24 @@ const images = [
     {
         id: 1,
         title: 'We found the most impressive about Light IT Global their engagement and availability as well as their focus on quality. Our cooperation was very successful, and the process was really clear.',
-        dis: 'A comprehensive, scalable SAAS solution helps medical professionals operate MRI images more efficiently. It not only reduces the need for manual labor but also provides employees with an easy-to-use digital catalog. The platform has already been successfully incorporated into the infrastructure of one of the clinics in Israel and has processed more than 1 million images.',
+        dis: 'Senegal Country Director, Head of QA  ',
+        name:'Muhammad Ahmad',
         img1: 'https://cdn.light-it.net/icons/testimonials/edacy.svg',
         
     },
     {
         id: 2,
         title: 'We found the most impressive about Light IT Global their engagement and availability as well as their focus on quality. Our cooperation was very successful, and the process was really clear.',
-        dis: 'A comprehensive, scalable SAAS solution helps medical professionals operate MRI images more efficiently. It not only reduces the need for manual labor but also provides employees with an easy-to-use digital catalog. The platform has already been successfully incorporated into the infrastructure of one of the clinics in Israel and has processed more than 1 million images.',
+        dis: 'Ceo',
+        name: 'Saim Raza',
         img1: 'https://cdn.light-it.net/icons/testimonials/tigerq.svg',
       
     },
     {
         id: 3,
         title: 'We found the most impressive about Light IT Global their engagement and availability as well as their focus on quality. Our cooperation was very successful, and the process was really clear.',
-        dis: 'A comprehensive, scalable SAAS solution helps medical professionals operate MRI images more efficiently. It not only reduces the need for manual labor but also provides employees with an easy-to-use digital catalog. The platform has already been successfully incorporated into the infrastructure of one of the clinics in Israel and has processed more than 1 million images.',
+        name: 'Sania Mirza',
+        dis: 'Director Of Technology ',
         img1: 'https://cdn.light-it.net/icons/testimonials/tutorpeers.svg',
 
     }
@@ -56,10 +59,10 @@ function Ceo() {
                 {images.map((item, index) => (
                     <div key={index}>
                         {Math.abs(activeStep - index) <= 2 ? (
-                            <Grid container width={"70%"} mx="auto" spacing={2}>
+                            <Grid container width={{ md: '70%', xs: '90%' }} mx="auto" spacing={2}>
 
                                 
-                                <Grid item md='4'>
+                                <Grid item md='4'xs={12} >
                                     <Stack direction="row" spacing={2}>
                                         <Box>
                                             <img
@@ -79,18 +82,18 @@ function Ceo() {
 
 
                                 </Grid>
-                                <Grid item md="8">
+                                <Grid item md="8" xs={12}>
                                     <Typography variant="h6" component="div" sx={{
                                         // fontSize: '1.875em',
                                         lineHeight: '120%',
                                         fontWeight: '600'
                                     }}>
-                                        {item.title}
+                                        <span style={{ color:'#db5156',fontSize:'30px'}}>"</span> {item.title}
                                     </Typography>
+                                    <Typography sx={{marginTop:'20px',fontSize:'25px',color:'black',fontWeight:600}}>{item.name}</Typography>
 
                                     <Typography variant="body2" sx={{
                                         fontSize: '1.125em',
-                                        marginTop: ' 27px',
                                         letterSpacing: '.002em',
                                         marginBottom: '28px',
                                         lineHeight: '150%'

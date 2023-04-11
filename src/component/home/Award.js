@@ -50,14 +50,16 @@ function Award() {
 
            
             <Typography mt={3} variant='h2' sx={{
-                fontWeight: '700', textAlign: 'center'
+                    fontWeight: '700', textAlign: 'center', fontSize: {
+                        xs: '30px', md: '60px'
+                    }
             }} pt={5}>
                 Awards and Recognitions
             </Typography>
 
             {/*==================service card============== */}
 
-            <Grid container width={'70%'} mx={'auto'} spacing={2} mt={2}  pb={5}>
+                <Grid container width={{ md: '70%',xs:'90%'}} mx={'auto'} spacing={2} mt={2}  pb={5}>
                     {award.map((item) => {
                     return (
                         <Grid item md="2.4" sm={4}  xs={6}>

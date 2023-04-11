@@ -5,14 +5,16 @@ function Indestries() {
     return (
         <>
             <Typography pt={3} variant='h2' sx={{
-                fontWeight: '700', textAlign: 'center'
+                fontWeight: '700', textAlign: 'center', fontSize: {
+                    xs: '30px', md: '60px'
+                }
             }} paddingTop={5}>
                 Our Industries
             </Typography>
 
             {/*==================service card============== */}
 
-            <Grid container width={'70%'} mx={'auto'} spacing={2} mt={2} pb={5} >
+            <Grid container width={{ md: '70%', xs: '90%' }} mx={'auto'} spacing={2} mt={2} pb={5} >
                 {indestriesdata.map((item) => {
                     return (
                         <Grid item md="4" sm='6' xs="12">

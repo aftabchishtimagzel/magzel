@@ -20,7 +20,7 @@ const BannerMain=(props)=> {
         style={{
           position: 'absolute',
           top: '0',
-          left: '0',
+          left: '0', 
           width: '100%',
           height: '70vh',
           // backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -33,6 +33,9 @@ const BannerMain=(props)=> {
         <Box width={{ md: '45%', xs:'90%'}}>
           <Typography variant="h3" style={{ color: '#fff', marginBottom: '1rem', fontWeight:{md:'800',xs:'500'} }}>
             {props.title}
+          </Typography>
+          <Typography variant="h4" style={{ color: '#fff', marginBottom: '1rem',fontWeight: { md: '800', xs: '500' } }}>
+          {props.titlemain}
           </Typography>
           {/* <Typography variant="h5" style={{ color: '#fff', marginBottom: '1rem', fontWeight: { md: '800', xs: '500' } }}> */}
           <p style={{color:"white "}}>
