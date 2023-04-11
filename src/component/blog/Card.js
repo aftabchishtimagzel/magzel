@@ -40,7 +40,7 @@ const BlogCard=(props)=> {
             {props.title}
      
           </Typography>
-          <Typography height={"150px"} variant="body2" color="text.secondary">
+          <Typography  variant="body2" color="text.secondary">
       
             {isReadMore ? props.des.slice(0, 150) : props.des}
             

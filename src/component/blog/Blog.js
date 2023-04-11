@@ -7,6 +7,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Latest from './Latest';
+import { Button, Stack } from '@mui/material';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -49,26 +50,43 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '70%' }} mx={"auto"}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-     
-          <Tab label="Latest " {...a11yProps(0)} />
-          <Tab label="Tech" {...a11yProps(1)} />
-          <Tab label="Designs" {...a11yProps(2)} />
-          <Tab label="Light IT" {...a11yProps(3)} />
-        </Tabs>
-      </Box>
+    <>
+    
+    <Stack sx={{ width:{xs:"100%",md:'70%' }}} mx={"auto"} justifyContent={"space-between"}>
+   
+    <Stack sx={{ borderBottom: 1, borderColor: 'divider' }} direction={"row"} justifyContent={"space-between"}>
+   
+<Stack  marginTop={2}>
+<input style={{border:"none",padding:"7px",borderRadius:"15px"}} type="text" placeholder='find Article...'/>
+  
+
+</Stack>
+    
+     <Box>
+     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        
+        <Tab label="Latest " {...a11yProps(0)} />
+        <Tab label="Tech" {...a11yProps(1)} />
+        <Tab label="Designs" {...a11yProps(2)} />
+        <Tab label="Light IT" {...a11yProps(3)} />
+      </Tabs>
+     </Box>
+      </Stack>
       <TabPanel value={value} index={0}>
      <Latest/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+      <Latest/>
+
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <Latest/>
       </TabPanel>
-    </Box>
+      <TabPanel value={value} index={3}>
+      <Latest/>
+      </TabPanel>
+    </Stack>
+    </>
   );
 }
 
