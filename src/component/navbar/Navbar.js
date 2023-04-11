@@ -9,11 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { navItems } from './Data';
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
+import logo from '../../images/logo.png'
 
 const drawerWidth = 240;
 
@@ -27,9 +27,22 @@ function Header(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-           Magzel
-            </Typography>
+
+            <Box
+                // variant="h5"
+               sx={{my:2}}
+            >
+                <Link to='/' style={{
+                    textDecoration: 'none',
+                    color: 'white'
+                }}>
+
+                    < img width={{ md: "200px", xs: '150px' }} height={"60px"} src={logo} alt="" style={{
+                        objectFit: 'cover',
+                        marginBottom: '-15px'
+                    }} />
+                </Link>
+            </Box>
             <Divider />
             <List sx={{ display: "flex", flexDirection: 'column' }}>
 
@@ -60,20 +73,23 @@ function Header(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ backgroundColor: 'black', color: 'white' }} >
-                <Box sx={{ width: { xs: '100%', sm: '100%', md: '70%' } }} mx="auto">
+            <AppBar component="nav" sx={{ backgroundColor: 'white', color: 'black' }} >
+                <Box sx={{ width: { xs: '100%', sm: '100%', md: '70%' },alignItems:'center' }} mx="auto" >
                     <Toolbar  >
 
                         <Box
-                            variant="h5"
+                            // variant="h5"
                             sx={{ flexGrow: 1 }}
                         >
                             <Link to='/' style={{
                                 textDecoration: 'none',
                                 color: 'white'
                             }}>
-
-                                Magzel
+ 
+                                < img width={{ md:"200px",xs:'150px' }} height={"50px"} src={logo} alt="" style={{
+                                    objectFit: 'cover',
+                                    marginBottom:'-15px'
+                                }}/>
                             </Link>
                         </Box>
 
@@ -81,7 +97,7 @@ function Header(props) {
 
                             {navItems.map(({ id, title, url }) => (
                                 <Link style={{ color: 'white', textDecoration: 'none' }} key={id} to={url}>
-                                    <Button sx={{ color: '#fff' }} >
+                                    <Button sx={{ color: 'black',fontSize:'16px',fontWeight:'600', mr:"3px" }} >
                                         {title}
                                     </Button>
                                 </Link>
@@ -90,7 +106,7 @@ function Header(props) {
 
                         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Button variant="contained" sx={{
-                                bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px', borderRadius: '64px', ":hover": {
+                                bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px',marginLeft:'10px' ,borderRadius: '64px', ":hover": {
                                     bgcolor: '  #db5156'
                                 }
                             }}>Contact Us</Button>
