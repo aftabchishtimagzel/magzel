@@ -30,19 +30,22 @@ const BlogCard = (props) => {
             {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {isReadMore ? props.des.slice(0, 120)+" ..." : props.des}
+          
+            {isReadMore ? props.des.slice(0, 120) : props.des}
 
-            <Box mt={1}>
-              {isReadMore ? (
-                <Button onClick={toggleReadMore} variant="outlined">
-                  read more
-                </Button>
-              ) : (
-                <Button onClick={toggleReadMore} variant="outlined">
-                  show less
-                </Button>
-              )}
-            </Box>
+        {
+          props.team ==="team" ? null:    <Box mt={1}>
+          {isReadMore ? (
+            <Button onClick={toggleReadMore} variant="outlined">
+              read more
+            </Button>
+          ) : (
+            <Button onClick={toggleReadMore} variant="outlined">
+              show less
+            </Button>
+          )}
+        </Box>
+        }
           </Typography>
         </CardContent>
       </CardActionArea>

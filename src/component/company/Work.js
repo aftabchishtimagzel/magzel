@@ -1,9 +1,5 @@
 import * as React from 'react';
-// import Accordion from '@mui/material/Accordion';
-// import AccordionDetails from '@mui/material/AccordionDetails';
-// import AccordionSummary from '@mui/material/AccordionSummary';
-// import Typography from '@mui/material/Typography';
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import { Box } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -11,7 +7,6 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const Work=()=> {
   const [expanded, setExpanded] = React.useState(false);
   const [icon, setIcon] = React.useState(false);
@@ -24,8 +19,8 @@ const Work=()=> {
   };
 
   return (
-    <Box width={{sx:"100%",md:"70%"}} mx={"auto"} p={2}>
-      <h1 style={{textAlign:"center"}}>Our Working Culture</h1>
+    <Box width={{sx:"100%",md:"70%"}} mx={"auto"} p={2} >
+      <h1 style={{textAlign:"center" }}>Our Working Culture</h1>
          <Accordion>
         <AccordionSummary
         onClick={handleChange}

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "../component/navbar/Navbar";
 import { privateRoutes } from "./routesData";
 import Footer from "../component/footer/Footer";
+import Contact from "../component/footer/Contact";
 
 const Routing = () => {
     return (
@@ -20,6 +21,7 @@ const Routing = () => {
                     ))
                    }
             </Routes>
+            <Contact/>
             {/* footer */}
             <Footer/>
            

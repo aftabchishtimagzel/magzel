@@ -4,6 +4,7 @@ import Facts from "./Facts";
 import Work from "./Work";
 import Award from "../home/Award";
 import Download from "./Download";
+import Team from "./Team";
 
 const Company = () => {
   return (
@@ -24,6 +25,7 @@ const Company = () => {
       <Work/>
       <Download/>
       <Award/>
+      <Team/>
     </div>
   );
 };
