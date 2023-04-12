@@ -61,11 +61,11 @@ const Project = () => {
             return(
                 <Stack key={i} width={{xs:"100%",md:"70%"}} mx={"auto"} sx={{backgroundColor:`${item.bgcolor}`,borderRadius:"15px"}} direction={{md:"column"}} justifyContent={"space-between"} p={5} >
               <Stack direction={{xs:"column",md:"row"}} mx={"auto"} justifyContent={"space-between"}>
-              <Box width={{xs:"100%",md:"40%"}}>
+              <Box width={{xs:"100%",md:"40%"}} >
                 <h1 style={{color:"white"}}>{item.title}</h1>
                 <span style={{color:"white"}}>{item.des}</span>
                 </Box>
-                <Box width={{xs:"100%",md:"40%"}}>
+                <Box width={{xs:"100%",md:"40%"}} order={{xs:'-1',md:'0'}}>
                 <img style={{width:"100%"}} src={item.img}/>
                 </Box>
                 </Stack>

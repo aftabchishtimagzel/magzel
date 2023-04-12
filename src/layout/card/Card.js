@@ -21,10 +21,11 @@ const BlogCard = (props) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="220"
+          height="270"
           image={props.img}
           alt="green iguana"
         />
+        
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {props.title}
