@@ -22,9 +22,10 @@ function Banner1(props) {
                 </Grid>
 
                 {/* =================image===================== */}
-          <Grid item md={6} xs={12}  order={{xs:'-1',md:'0'}}>
-              <img src={ props.image} alt="web" width={"100%"} height={"auto"} />
+                <Grid item md={6} xs={12} order={{ xs: '-1', md: '0' }}>
+                    <img src={props.image} alt="web" width={"100%"} height={"auto"} style={{ animation: "moveUpDown 2s ease-in-out infinite", }}  />
                 </Grid>
+
      </Grid >
         </Box>
   )
