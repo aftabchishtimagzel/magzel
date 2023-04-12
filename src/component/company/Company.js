@@ -5,11 +5,12 @@ import Work from "./Work";
 import Award from "../home/Award";
 import Download from "./Download";
 import Team from "./Team";
-
+import img from "../../../src/images/blog/company.jpg"
 const Company = () => {
   return (
     <div>
       <BannerMain
+      img={img}
         title={"Who We Are"}
         title1={
           "Magzel is a software engineering company, a band of experienced and enthusiastic developers, designers, analysts, and managers."
