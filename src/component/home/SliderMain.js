@@ -43,11 +43,12 @@ function SliderMain() {
           
             Magzel is one of the pioneers in web 3.0 development
           </Typography>
+          <a href='#contact' style={{ textDecoration: 'none' }}>
           <Button variant="contained" sx={{
             bgcolor: '  #db5156', color: 'white',marginTop:'10px', padding: '14.5px 64.5px', borderRadius:'64px', ":hover": {
               bgcolor: '  #db5156'
             }
-          }} > Let's talk</Button>
+          }} > Let's talk</Button></a>
         
         </Box>
 

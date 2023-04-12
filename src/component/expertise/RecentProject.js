@@ -1,6 +1,7 @@
 import React from 'react'
 import slide from '../../images/programebg.jpg'
 import { Box, Button, Typography } from '@mui/material'
+import { NavLink } from 'react-router-dom'
 
 
 function RecentProject() {
@@ -35,12 +36,12 @@ function RecentProject() {
 
                         Discover our recent projects
                     </Typography>
-
+                    <NavLink to="/project" style={{textDecoration:'none'}}>
                     <Button variant="contained" sx={{
                         bgcolor: '  #db5156', color: 'white', marginTop: '10px', padding: '14.5px 64.5px', borderRadius: '64px', ":hover": {
                             bgcolor: '  #db5156'
                         }
-                    }} >Learn More</Button>
+                        }} >Learn More</Button> </NavLink>
 
                 </Box>
 

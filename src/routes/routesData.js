@@ -7,6 +7,7 @@ import Expertise from "../pages/expertise/Expertise";
 import Home from "../pages/home/Home";
 import Indestry from "../pages/indestries/Indestry";
 import MainProjec from "../pages/project/MainProjec";
+import Detail from "../pages/services/Detail";
 import Service from "../pages/services/Service";
 
 
