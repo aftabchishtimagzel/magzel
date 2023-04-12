@@ -59,7 +59,7 @@ function Header(props) {
                 <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                     <a href='#contact' style={{ textDecoration: 'none' }}>
                         <Button variant="contained" sx={{
-                            bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px', marginLeft: '10px', borderRadius: '64px', ":hover": {
+                            bgcolor: '  #db5156', color: 'white', padding: '10.5px 25.5px',  marginLeft: '10px', borderRadius: '64px', ":hover": {
                                 bgcolor: '  #db5156'
                             }
                         }}>Contact Us</Button></a>
@@ -112,7 +112,7 @@ function Header(props) {
                                 sx={{
                                     bgcolor: ' #db5156',
                                     color: 'white',
-                                    padding: '10.5px 50.5px',
+                                    padding: '10.5px 25.5px',
                                     marginLeft: '10px',
                                     borderRadius: '64px',
                                     ':hover': { bgcolor: ' #db5156' }
