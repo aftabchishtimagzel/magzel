@@ -10,7 +10,7 @@ const Latest = () => {
                 Data.map((item,i)=>{
                     return(
          
-                     <Grid  key={i} item xs={12} sm={6} md={3.5}>
+                     <Grid  key={i} item xs={12} sm={6} md={5.5} lg={3.5}>
 
                     <BlogCard img={item.img} title={item.title} des={item.des}/> 
                     </Grid>

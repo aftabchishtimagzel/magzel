@@ -18,7 +18,7 @@ export const navItems = [
     },
     {
         id: 4,
-        title: "Success Stories",
+        title: "Stories",
         url: "/project",
     },
     {
