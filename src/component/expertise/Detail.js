@@ -1,7 +1,8 @@
 import React from 'react'
 import slide from '../../images/project-bg.png'
 import { Box,  Stack,  Typography } from '@mui/material'
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';import { NavLink } from 'react-router-dom';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { NavLink } from 'react-router-dom';
 ;
 
 function Detail() {
@@ -24,7 +25,7 @@ function Detail() {
                     top: '0',
                     left: '0',
                     width: '100%',
-                    height: '100%',
+                    height: '70%',
                     // backgroundColor: 'rgba(0, 0, 0, 0.5)',
                     display: 'flex',
                     alignItems: 'center',

@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 import logo from '../../images/logo.png'
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 function Header(props) {
     const { window } = props;

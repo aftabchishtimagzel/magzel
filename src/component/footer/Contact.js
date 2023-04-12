@@ -149,13 +149,15 @@ const Contact = () => {
           </Box>
         </Stack>
         <Grid container width={{ xs: "100%", md: "50%" }}>
-          <Grid item xs={12} md={12}>
-            {award.map((action) => {
-              return (
+          {award.map((action) => {
+            return (
+          <Grid item xs={6} md={4}>
+           
                 <img style={{ width: "180px" }} src={action.url} alt="image" />
-              );
-            })}
-          </Grid>
+             
+              </Grid>
+            );
+          })}
         </Grid>
       </Stack>
     </>

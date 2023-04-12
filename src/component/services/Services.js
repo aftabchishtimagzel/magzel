@@ -2,6 +2,7 @@ import { Box, Button, Card, CardActions, CardContent, Grid, Typography } from '@
 import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import servicesdata from './Data';
+import { NavLink } from 'react-router-dom';
 function Services() {
     return (
         <>
@@ -24,7 +25,8 @@ function Services() {
             <Grid container width={{ md: '70%', xs: '90%' }} mx={'auto'} spacing={2} mt={2} pb={5} >
                 {servicesdata.map((item) => {
                     return (
-                <Grid item md="4"  sm='6' xs="12">
+                        <Grid item md="4" sm='6' xs="12">
+                            <NavLink to="/servicesdetail"  style={{textDecoration:'none'}}>
                     <Card  sx={{
                         cursor: 'pointer', padding: '10px',borderRadius:'15px',
                         ":hover": {
@@ -60,7 +62,8 @@ function Services() {
                                 color: '#db517c',gap:'4px' ,fontSize:'16px'
                             }}>Learn More  <ArrowRightAltIcon sx={{ fontSize: '40px' }} /></Button>
                     </CardActions>
-                </Card>
+                                </Card>
+                            </NavLink>
             </Grid>
             
                     );
