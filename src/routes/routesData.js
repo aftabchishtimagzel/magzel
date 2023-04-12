@@ -5,6 +5,7 @@ import DetailsProgrames from "../pages/detail/DetailsProgrames";
 import Expertise from "../pages/expertise/Expertise";
 import Home from "../pages/home/Home";
 import Indestry from "../pages/indestries/Indestry";
+import MainProjec from "../pages/project/MainProjec";
 import Service from "../pages/services/Service";
 
 
@@ -40,6 +41,10 @@ export const privateRoutes = [
     {
         path: "/detail",
         element: <DetailsProgrames />,
+    },
+    {
+        path: "/project",
+        element: <MainProjec />,
     },
 ]
 

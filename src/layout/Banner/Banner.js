@@ -7,7 +7,7 @@ const BannerMain=(props)=> {
   return (
     <div style={{ position: 'relative' }}>
       <img
-        src={slide}
+        src={ props.img ? props.img :slide}
         alt="Artist"
         style={{
           width: '100%',
@@ -30,7 +30,7 @@ const BannerMain=(props)=> {
           flexDirection: 'column',
         }}
       >
-        <Box width={{ md: '45%', xs:'90%'}}>
+        <Box width={{ md: '50%', xs:'90%'}}>
           <Typography variant="h3" style={{ color: '#fff', marginBottom: '1rem', fontWeight:{md:'800',xs:'500'} }}>
             {props.title}
           </Typography>
