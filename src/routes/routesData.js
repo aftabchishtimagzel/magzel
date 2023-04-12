@@ -1,4 +1,5 @@
 
+import Detail from "../component/expertise/Detail";
 import Blog from "../pages/blog/Blog";
 import MainCompany from "../pages/company/MainCompany";
 import DetailsProgrames from "../pages/expertise/DetailsProgrames";
