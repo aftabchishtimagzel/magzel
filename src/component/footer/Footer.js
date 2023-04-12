@@ -1,4 +1,4 @@
-import { Grid, Box, Stack, Divider } from '@mui/material'
+import { Grid, Box, Stack, Divider, Typography } from '@mui/material'
 import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -17,7 +17,7 @@ const Footer = () => {
             <Box sx={{ backgroundColor: 'black', color: 'white' }} mt={5}  >
                 <Grid container spacing={4} width={'98%'} mx={'auto'} mb={5} padding={"10px 0px"} >
                     {/* logo */}
-                    <Grid item lg={2.4}>
+                    <Grid item lg={2.4} xs={12}>
                         <Box sx={{ bgcolor: 'white' ,width:'180px'}}>
                             <Link to='/' style={{
                                 textDecoration: 'none',
@@ -31,6 +31,9 @@ const Footer = () => {
                                 }} />
                             </Link>
                         </Box>
+                        <Typography mt={5} display={{ xs: 'none', md: 'block' }}>
+                            +44 208 089 9049
+                        </Typography>
                       
                     </Grid>
 
