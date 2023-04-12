@@ -63,13 +63,32 @@ export default function BasicTabs() {
 </Stack>
     
      <Box>
-     <Tabs  variant="scrollable" scrollButtons="auto"   allowScrollButtonsMobile value={value} onChange={handleChange} aria-label="basic tabs example">
-        
-        <Tab label="Latest " {...a11yProps(0)} />
-        <Tab label="Tech" {...a11yProps(1)} />
-        <Tab label="Designs" {...a11yProps(2)} />
-        <Tab label="Light IT" {...a11yProps(3)} />
-      </Tabs>
+            <Tabs
+              variant="scrollable"
+              scrollButtons="auto"
+              allowScrollButtonsMobile
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+              sx={{
+                '& .MuiTabs-indicator': {
+                  backgroundColor: '#eb5757'
+                },
+                '& .MuiTab-root': {
+                  color: 'black',
+                  fontWeight: 'normal',
+                },
+                '& .Mui-selected': {
+                  fontWeight: 'bold',
+                }
+              }}
+            >
+              <Tab label="Latest" {...a11yProps(0)} />
+              <Tab label="Tech" {...a11yProps(1)} />
+              <Tab label="Designs" {...a11yProps(2)} />
+              <Tab label="Light IT" {...a11yProps(3)} />
+            </Tabs>
+
      </Box>
       </Stack>
       <TabPanel value={value} index={0}>
