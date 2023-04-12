@@ -1,126 +1,148 @@
-import { Button, Grid, Box, Stack } from '@mui/material'
+import { Grid, Box, Stack, Divider } from '@mui/material'
 import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
+import logo from '../../images/logo.png'
+import moment from 'moment/moment';
 const Footer = () => {
     return (
         <>
 
             {/* newsletter */}
 
-            <Box sx={{ backgroundColor: 'black', color: 'white' }}mt={5} >
-                <Grid container spacing={4} width={'98%'} mx={'auto'} borderBottom={'1px solid white'} padding={"10px 0px"} >
+            <Box sx={{ backgroundColor: 'black', color: 'white' }} mt={5}  >
+                <Grid container spacing={4} width={'98%'} mx={'auto'} mb={5} padding={"10px 0px"} >
                     {/* logo */}
-                    <Grid item lg={2}>
-                        <h3>Magzel</h3>
+                    <Grid item lg={2.4}>
+                        <Box sx={{ bgcolor: 'white' ,width:'180px'}}>
+                            <Link to='/' style={{
+                                textDecoration: 'none',
+                                color: 'white',
+
+                            }}>
+
+                                < img width={'100%'} height={"50px"} src={logo} alt="" style={{
+                                    objectFit: 'cover',
+                                    marginBottom: '-15px'
+                                }} />
+                            </Link>
+                        </Box>
+                      
                     </Grid>
 
-                    <Grid item lg={2}>
-                        <h4>Feature</h4>
-                        <Stack direction={"column"} spacing={0.2} sx={{ color: 'gray' }}>
-                            <p>Mens</p>
-                            <p> Womens</p>
-                            <p>Boys</p>
-                            <p> Girls</p>
-                            <p> New Arrivals</p>
-                            <p>Shoes</p>
-                            <p> Cothes</p>
-                            <p> Accessories</p>
-                        </Stack>
-                    </Grid>
-                    <Grid item lg={2} >
-                        <h4>Menu</h4>
-                        <Stack direction={"column"} spacing={0.2} sx={{ color: 'gray' }}>
-                            <p> About Us</p>
-                            <p> Contact Us</p>
-                            <p><Link style={{ textDecoration: "none", color: "white" }} to="/mydashboard" >My Account</Link></p>
-                            <p> Order History</p>
-                            <p><Link style={{ textDecoration: "none", color: "white" }} to="/wishlist" >My Wishlist</Link></p>
-                            <p>Blog</p>
-                            <p> Login</p>
-                        </Stack>
-                    </Grid>
-                    <Grid item lg={2}>
-                        <h4>Contact Us</h4>
-                        <Stack direction={"column"} spacing={0.2} sx={{ color: 'gray' }}>
-                            <h4 style={{
-                                color: "white"
-                            }}>Address:</h4>
+                    <Grid item lg={2.4} display={{xs:'none',md:'block'}}>
+                        <h3>Industries</h3>
+                        <Stack direction={"column"} spacing={0.2} >
+
+                            <p>Healthcare</p>
+                            <p>Finance & Banking</p>
+                            <p>Education</p>
+                            <p>Media & Advertising</p>
+                            <p>Retail</p>
+                            <p> Travel & Transportation</p>
                             <p style={{
-                                marginTop: '-14px'
-                            }}>123 street name City England</p>
-
-                            <h4 style={{
-                                color: "white"
-                            }}>Phone:</h4>
-                            <p>(123) 456-7890</p>
-
-                            <h4 style={{
-                                color: "white"
-                            }}>Email:</h4>
-                            <p>email@example.com</p>
-
-                            <h4 style={{
-                                color: "white"
-                            }}>Working Days/Hours</h4>
-                            <p>Mon-Sun/9:00AM-8:00PM</p>
-                        </Stack>
-                    </Grid>
-                    <Grid item lg={2}>
-                        <h4>Follow us</h4>
-                        <Stack direction={"column"} spacing={0.5} sx={{ color: 'gray' }}>
-                            <Stack
-                                direction="row"
-                                alignItems="center"
-                                spacing={4}
-                            ><FacebookIcon sx={{ color: 'white' }} />
-                                Facebook
-                            </Stack>
-
-                            <Stack
-                                direction="row"
-                                alignItems="center"
-                                spacing={4}
-                            ><TwitterIcon sx={{ color: 'white' }} />
-                                Twitter
-                            </Stack>
-
-                            <Stack
-                                direction="row"
-                                alignItems="center"
-                                spacing={4}
-                            ><InstagramIcon sx={{ color: 'white' }} />
-                                Instagram
-                            </Stack>
-
-
+                                color: '#ad2322'
+                            }}
+                            > See more</p>
 
                         </Stack>
                     </Grid>
-                    <Grid item lg={2}>
-                        <h4>Join Us</h4>
-                        <Stack direction={"column"} spacing={0.5} sx={{ color: 'gray' }}>
-                            <input type="email" placeholder='Enter Your Email' style={{ padding: '15px 4px' }} required />
-                            <Button variant="contained" fullWidth sx={{
-                                backgroundColor: 'white', color: 'black', ":hover": {
-                                    backgroundColor: 'white', color: 'black'
-                                }
-                            }}>SUBSCRIBE!</Button>
-
+                    <Grid item lg={2.4} display={{ xs: 'none', md: 'block' }}>
+                        <h3>Services</h3>
+                        <Stack direction={"column"} spacing={0.2} >
+                            <p>Web Development</p>
+                            <p> Mobile Development</p>
+                            <p> IT Consulting</p>
+                            <p>Business Analysis</p>
+                            <p> Quality Assurance</p>
+                            <p>  Design Solutions</p>
+                            <p style={{
+                                color: '#ad2322'
+                            }}
+                            > See more</p>
 
                         </Stack>
                     </Grid>
+                    <Grid item lg={2.4} display={{ xs: 'none', md: 'block' }}>
+                        <h3>Expertise</h3>
+                        <Stack direction={"column"} spacing={0.2} > 
+                         
+                            <p> Front-end Development</p>
+                            <p> Back-end Development</p>
+                            <p>SaaS Solutions</p>
+                            <p> Data Mining & BI</p>
+                            <p>AI & Chatbots</p>
+                            <p> Cloud Solutions</p>
+                            <p style={{
+                                color: '#ad2322'
+                            }}
+                            > See more</p>
+
+                        </Stack>
+                    </Grid>
+                    <Grid item lg={2.4} display={{ xs: 'none', md: 'block' }}>
+                        <h3>About Us</h3>
+                        <Stack direction={"column"} spacing={0.2} >
+                            <p>Company</p>
+                            <p>Academy</p>
+                            <p>Career</p>
+                            <p>Success stories</p>
+                            <p>Blog</p>
+                            <p style={{
+                                color: '#ad2322'
+                            }}
+                            > See more</p>
+
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={12} width={"80%"} mx={'auto'}>
+                        <Stack direction={"row"} spacing={5} alignItems={"center"} display={{xs:'flex',md:'none'}}  >
+                           
+                                <FacebookIcon />
+                                <InstagramIcon />
+                                <YouTubeIcon />
+                                <LinkedInIcon />
+                                <TwitterIcon />
+                        </Stack>
+                    </Grid>
+
                 </Grid>
 
-                {/* developed by: */}
-
 
                 {/* developed by: */}
 
-                <Box width={'98%'} mx={'auto'} padding={"10px 0px"} >
-                    <p>© 2023 Crisp theme developed by Muhammad Rizwan</p>
+                <Box width={'70%'} mx={'auto'} padding={"10px 0px"} >
+                    <Divider sx={{ bgcolor: 'white' }} />
+                    <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
+                        <p>© {moment().format('YYYY')} Magzel. All rights reserved | Terms of Use and Privacy Policy</p>
+                        <Stack direction={"row"} spacing={5} alignItems={"center"} display={{ xs: 'none', md: 'flex' }}>
+                            <Box>
+                                <FacebookIcon />
+                           
+                            </Box>
+                            <Box>
+                                <InstagramIcon/>
+                           
+                            </Box>
+                            <Box>
+                                <YouTubeIcon />
+                           
+                            </Box>
+                            <Box>
+                                <LinkedInIcon />
+                           
+                            </Box>
+                            <Box>
+                                <TwitterIcon />
+                           
+                            </Box>
+                        </Stack>
+                     </Stack>
+                   
                 </Box>
             </Box>
         </>

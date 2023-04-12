@@ -20,6 +20,7 @@ const drawerWidth = 240;
 function Header(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [activeMenuItem, setActiveMenuItem] = React.useState(null); // Add state for active menu item
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -74,7 +75,7 @@ function Header(props) {
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component="nav" sx={{ backgroundColor: 'white', color: 'black' }} >
-                <Box sx={{ width: { xs: '100%', sm: '100%', md: '70%' },alignItems:'center' }} mx="auto" >
+                <Box sx={{ width: { xs: '100%', sm: '100%', md: '100%',lg:'70%' },alignItems:'center' }} mx="auto" >
                     <Toolbar  >
 
                         <Box
@@ -92,17 +93,33 @@ function Header(props) {
                                 }}/>
                             </Link>
                         </Box>
-
                         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-
                             {navItems.map(({ id, title, url }) => (
-                                <Link style={{ color: 'white', textDecoration: 'none' }} key={id} to={url}>
-                                    <Button sx={{ color: 'black',fontSize:'16px',fontWeight:'600', mr:"3px" }} >
+                                <Link
+                                    key={id}
+                                    to={url}
+                                    style={{ color: 'white', textDecoration: 'none' }}
+                                    onClick={() => setActiveMenuItem(id)}
+                                >
+                                    <Button
+                                        sx={{
+                                            borderRadius: '0px',
+                                            color: 'black',
+                                            fontSize: '16px',
+                                            fontWeight: '600',
+                                            mr: { xs: '8px', sm: '12px', md: '20px' }, // distance between buttons for different screen sizes
+                                            ":hover": {
+                                                borderBottom: '2px solid red'
+                                            },
+                                            ...(activeMenuItem === id && { borderBottom: '2px solid red' })
+                                        }}
+                                    >
                                         {title}
                                     </Button>
                                 </Link>
                             ))}
                         </Box>
+
 
                         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Button variant="contained" sx={{
@@ -116,7 +133,9 @@ function Header(props) {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { md: 'none' } }}
+                            sx={{
+                                mr: 2, border: '1px solid #353538',
+                                borderRadius: '9px',display: { md: 'none' } }}
                         >
                             <MenuIcon />
                         </IconButton>
