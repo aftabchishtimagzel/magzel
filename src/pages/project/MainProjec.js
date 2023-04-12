@@ -3,7 +3,7 @@ import Project from '../../component/project/Project'
 
 const MainProjec = () => {
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(202, 202, 202)"}}>
       <Project/>  
     </div>
   )

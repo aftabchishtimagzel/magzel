@@ -30,39 +30,42 @@ const BannerMain=(props)=> {
           flexDirection: 'column',
         }}
       >
-        <Box width={{ md: '50%', xs:'90%'}}>
+        <Box width={{ md: '65%', xs:'90%'}}>
           <Typography variant="h3" style={{ color: '#fff', marginBottom: '1rem', fontWeight:{md:'800',xs:'500'} }}>
             {props.title}
           </Typography>
-          <Typography variant="h4" style={{ color: '#fff', marginBottom: '1rem',fontWeight: { md: '800', xs: '500' } }}>
+          <Typography width={{xs:"100%",md:"50%"}} variant="h4" style={{ color: '#fff', marginBottom: '1rem',fontWeight: { md: '800', xs: '500' } }}>
           {props.titlemain}
           </Typography>
-          {/* <Typography variant="h5" style={{ color: '#fff', marginBottom: '1rem', fontWeight: { md: '800', xs: '500' } }}> */}
-          <p style={{color:"white "}}>
+
+          
+         <Box width={{xs:"100%",md:"50%"}}>
+         <Typography style={{color:"white ",fontWeight:{md:'800',xs:'500'}}} >
           {
             props.title1
           }
-          </p>
-          {/* </Typography> */}
+          </Typography>
+      
          
-          <p style={{color:"white "}}>
+          <p style={{color:"white ",fontWeight:{md:'800',xs:'500'}}}>
           {
             props.title2
           }
           </p>
           {
-            props.title3 ? <p style={{color:"white "}}>
+            props.title3 ? <p style={{color:"white ",fontWeight:{md:'800',xs:'500'}}}>
             {
               props.title3
             }
-            </p> : <Button variant="contained" sx={{
+            </p>
+          : <Button variant="contained" sx={{
             bgcolor: '  #db5156', color: 'white',marginTop:'10px', padding: '14.5px 64.5px', borderRadius:'64px', ":hover": {
               bgcolor: '  #db5156'
             }
           }} > Let's talk</Button>
           }
           
-        
+          </Box> 
         </Box>
 
        

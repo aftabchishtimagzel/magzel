@@ -11,4 +11,5 @@ scroll-behavior: smooth;
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    /* background-color: rgb(202, 202, 202); */
 }

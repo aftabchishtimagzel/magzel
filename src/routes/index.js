@@ -21,8 +21,8 @@ const Routing = () => {
                     ))
                    }
             </Routes>
-            <Contact/>
             {/* footer */}
+            <Contact/>
             <Footer/>
            
         </>

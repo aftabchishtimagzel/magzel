@@ -8,7 +8,7 @@ import Team from "./Team";
 import img from "../../../src/images/blog/company.jpg"
 const Company = () => {
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(202, 202, 202)"}}>
       <BannerMain
       img={img}
         title={"Who We Are"}

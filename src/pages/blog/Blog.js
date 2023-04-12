@@ -3,7 +3,7 @@ import BlogsTabs from '../../component/blog/Blog'
 
 const Blog = () => {
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(202, 202, 202)"}}>
       <BlogsTabs/>  
     </div>
   )
