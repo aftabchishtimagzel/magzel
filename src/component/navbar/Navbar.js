@@ -75,76 +75,56 @@ function Header(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ backgroundColor: 'white', color: 'black' }} >
-                <Box sx={{ width: { xs: '100%', sm: '100%', md: '100%',lg:'70%' },alignItems:'center' }} mx="auto" >
-                    <Toolbar  >
-
-                        <Box
-                            // variant="h5"
-                            sx={{ flexGrow: 1 }}
-                        >
-                            <Link to='/' style={{
-                                textDecoration: 'none',
-                                color: 'white'
-                            }}>
- 
-                                < img width={{ md:"200px",xs:'150px' }} height={"50px"} src={logo} alt="" style={{
-                                    objectFit: 'cover',
-                                    marginBottom:'-15px'
-                                }}/>
-                            </Link>
-                        </Box>
-                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                            {navItems.map(({ id, title, url }) => (
-                                <Link
-                                    key={id}
-                                    to={url}
-                                    style={{ color: 'white', textDecoration: 'none' }}
-                                    onClick={() => setActiveMenuItem(id)}
+            <AppBar component="nav" sx={{ backgroundColor: 'white', color: 'black',padding:'10px 0px' }} >
+                <Box sx={{ width: '100%', maxWidth: '1200px', mx: 'auto', display: 'flex', alignItems: 'center' }}>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                            <img src={logo} alt="" width={{ md: "200px", xs: '150px' }} height="50px" style={{ objectFit: 'cover', marginBottom: '-15px' }} />
+                        </Link>
+                    </Box>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+                        {navItems.map(({ id, title, url }) => (
+                            <Link key={id} to={url}
+                                style={{ color: 'black', textDecoration: 'none', mr: '20px' }}
+                                onClick={() => setActiveMenuItem(id)}>
+                                <Button
+                                    variant="text"
+                                    sx={{
+                                        marginRight: '5px',
+                                        borderRadius:'0px',
+                                        fontWeight: '600',
+                                        color: "black",
+                                        ":hover": {
+                                            borderBottom: "2px solid red",
+                                        },
+                                        ...(activeMenuItem === id && {
+                                            borderBottom: "2px solid red",
+                                        }),
+                                    }}
                                 >
-                                    <Button
-                                        sx={{
-                                            borderRadius: '0px',
-                                            color: 'black',
-                                            fontSize: '16px',
-                                            fontWeight: '600',
-                                            mr: { xs: '8px', sm: '12px', md: '20px' }, // distance between buttons for different screen sizes
-                                            ":hover": {
-                                                borderBottom: '2px solid red'
-                                            },
-                                            ...(activeMenuItem === id && { borderBottom: '2px solid red' })
-                                        }}
-                                    >
-                                        {title}
-                                    </Button>
-                                </Link>
-                            ))}
-                        </Box>
-
-
-                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                            <a href='#contact' style={{textDecoration:'none'}}>
-                            <Button variant="contained" sx={{
-                                bgcolor: '  #db5156', color: 'white', padding: '10.5px 50.5px',marginLeft:'10px' ,borderRadius: '64px', ":hover": {
-                                    bgcolor: '  #db5156'
-                                }
-                                }}>Contact Us</Button></a>
-                        </Box>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            edge="start"
-                            onClick={handleDrawerToggle}
-                            sx={{
-                                mr: 2, border: '1px solid #353538',
-                                borderRadius: '9px',display: { md: 'none' } }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    </Toolbar>
+                                    {title}
+                                </Button>
+                                
+                            </Link>
+                        ))}
+                        <a href='#contact' style={{ textDecoration: 'none' }}>
+                            <Button variant="contained"
+                                sx={{
+                                    bgcolor: ' #db5156',
+                                    color: 'white',
+                                    padding: '10.5px 50.5px',
+                                    marginLeft: '10px',
+                                    borderRadius: '64px',
+                                    ':hover': { bgcolor: ' #db5156' }
+                                }}>Contact Us</Button>
+                        </a>
+                    </Box>
+                    <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ ml: 'auto', display: { md: 'none' }, border: '1px solid #353538', borderRadius: '9px' }}>
+                        <MenuIcon />
+                    </IconButton>
                 </Box>
-              
             </AppBar>
+
             <Box component="nav">
                 <Drawer
                     container={container}
