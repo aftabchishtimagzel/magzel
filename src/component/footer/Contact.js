@@ -56,7 +56,7 @@ const Contact = () => {
   ];
   return (
     <>
-      <Box sx={{ textAlign: "center" }} p={1}>
+      <Box sx={{ textAlign: "center" }} p={1} id="contact">
         <h1>Have a project in mind?</h1>
         <h3>Book a free consultation with tech experts</h3>
       </Box>
