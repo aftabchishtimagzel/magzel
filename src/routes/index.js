@@ -6,6 +6,7 @@ import Footer from "../component/footer/Footer";
 import Contact from "../component/footer/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./Use";
 const Routing = () => {
     useEffect(() => {
         AOS.init({
@@ -16,7 +17,7 @@ const Routing = () => {
         <div >
             {/* style={{backgroundColor:"lightgray"}} */}
        {/* ================routing===================  */}
-
+  <ScrollToTop>
             <Header/>
             <Routes>
                 {
@@ -32,7 +33,7 @@ const Routing = () => {
             {/* footer */}
             <Contact/>
             <Footer/>
-           
+            </ScrollToTop>
         </div>
     );
 };

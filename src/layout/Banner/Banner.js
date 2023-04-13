@@ -52,7 +52,7 @@ const BannerMain = (props) => {
             {props.titlemain}
           </Typography>
 
-          <Box width={{ xs: "100%", md: "50%" }}>
+          <Box width={{ xs: "100%", md: "50%" }} >
             <Typography
               style={{ color: "white ", fontWeight: { md: "800", xs: "500" } }}
             >

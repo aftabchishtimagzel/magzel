@@ -26,7 +26,7 @@ function Banner2(props) {
           flexDirection: "column",
         }}
       >
-        <Box sx={{ width: { md: "70%", xs: "90%" } }}>
+        <Box sx={{ width: { md: "70%", xs: "90%" } }} >
           <Typography
             variant="h4"
             sx={{
