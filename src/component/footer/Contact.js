@@ -1,21 +1,30 @@
 import { Button, Stack } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_8c6y8x7', 'template_sd5b7zp', form.current, 'XTHgEN1KsV08wAQJw')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
   };
+
+ 
+  
+   
   const award = [
     {
       id: 1,
@@ -72,6 +81,7 @@ const Contact = () => {
           <Box
             component="form"
             noValidate
+            ref={form}
             onSubmit={handleSubmit}
             sx={{ mt: 3 }}
           >
