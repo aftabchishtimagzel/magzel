@@ -124,24 +124,19 @@ const Footer = () => {
                         <p>© {moment().format('YYYY')} Magzel. All rights reserved | Terms of Use and Privacy Policy</p>
                         <Stack direction={"row"} spacing={5} alignItems={"center"} display={{ xs: 'none', md: 'flex' }}>
                             <Box>
-                                <FacebookIcon />
-                           
+                            <FacebookIcon />
                             </Box>
                             <Box>
-                                <InstagramIcon/>
-                           
+                           <InstagramIcon/>
                             </Box>
                             <Box>
-                                <YouTubeIcon />
-                           
+                             <YouTubeIcon />
                             </Box>
                             <Box>
-                                <LinkedInIcon />
-                           
+                            <LinkedInIcon />
                             </Box>
                             <Box>
-                                <TwitterIcon />
-                           
+                         <TwitterIcon />
                             </Box>
                         </Stack>
                      </Stack>

@@ -6,7 +6,8 @@ import Contact from "../component/footer/Contact";
 
 const Routing = () => {
     return (
-        <>
+        <div >
+            {/* style={{backgroundColor:"lightgray"}} */}
        {/* ================routing===================  */}
 
             <Header/>
@@ -25,7 +26,7 @@ const Routing = () => {
             <Contact/>
             <Footer/>
            
-        </>
+        </div>
     );
 };
 

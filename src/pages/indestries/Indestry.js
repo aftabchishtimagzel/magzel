@@ -6,7 +6,7 @@ import bannerimg from '../../images/industries-bg (1).jpg'
 
 function Indestry() {
   return (
-    <div style={{ backgroundColor: '#f1f4fd' }}>
+    <div style={{ backgroundColor: 'lightgray' }}>
       <Banner1
         title={'Custom Software Solutions Of Any Complexity'}
         head={"Grow stronger with our information technology solutions"}
