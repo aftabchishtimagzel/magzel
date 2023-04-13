@@ -12,7 +12,7 @@ function Home() {
   return (
     <div style={{ backgroundColor:'#f1f4fd'}}>
       
-      {/* <SliderMain /> */}
+      {/* ================banner2=================*/}
       <Banner2
         title={"Custom Software Development Company"}
         title2={" We are Experienced in the development of BlockchainWeb 3.0AppsWeb"}
