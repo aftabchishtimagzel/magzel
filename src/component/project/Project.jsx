@@ -60,12 +60,12 @@ const Project = () => {
         return (
           <Stack
             key={i}
-            width={{ xs: "80%", md: "70%" }}
+            width={{ xs: "70%",sm:"80", md: "70%" }}
             mx={"auto"}
             sx={{ backgroundColor: `${item.bgcolor}`, borderRadius: "15px" }}
             direction={{ md: "column" }}
             justifyContent={"space-between"}
-            p={5}
+            p={{xs:2,md:5}}
           >
             <Stack
               direction={{ xs: "column", md: "row" }}

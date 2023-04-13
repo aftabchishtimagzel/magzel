@@ -84,7 +84,7 @@ const Contact = () => {
       </Box>
 
       <Stack
-        direction={{ xs: "column", md: "row" }}
+        direction={{ xs: "column-reverse", md: "row" }}
         width={{ xs: "100%", md: "70%" }}
         mx="auto"
         p={2}
