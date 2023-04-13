@@ -13,11 +13,17 @@ const BlogCard = (props) => {
     setIsReadMore(!isReadMore);
   };
   return (
-    <Card sx={{
-      cursor: 'pointer', padding: '10px', borderRadius: '15px',
-      ":hover": {
-          boxShadow: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px'
-      }}}>
+    <Card
+      sx={{
+        cursor: "pointer",
+        padding: "10px",
+        borderRadius: "15px",
+        ":hover": {
+          boxShadow:
+            "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
+        },
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -25,28 +31,27 @@ const BlogCard = (props) => {
           image={props.img}
           alt="green iguana"
         />
-        
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          
             {isReadMore ? props.des.slice(0, 120) : props.des}
 
-        {
-          props.team ==="team" ? null:    <Box mt={1}>
-          {isReadMore ? (
-            <Button onClick={toggleReadMore} variant="outlined">
-              read more
-            </Button>
-          ) : (
-            <Button onClick={toggleReadMore} variant="outlined">
-              show less
-            </Button>
-          )}
-        </Box>
-        }
+            {props.team === "team" ? null : (
+              <Box mt={1}>
+                {isReadMore ? (
+                  <Button onClick={toggleReadMore} variant="outlined">
+                    read more
+                  </Button>
+                ) : (
+                  <Button onClick={toggleReadMore} variant="outlined">
+                    show less
+                  </Button>
+                )}
+              </Box>
+            )}
           </Typography>
         </CardContent>
       </CardActionArea>

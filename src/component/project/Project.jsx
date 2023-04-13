@@ -5,9 +5,9 @@ import img3 from "../../../src/images/project/pro6.png";
 import img4 from "../../../src/images/pro1.png";
 import img5 from "../../../src/images/pro2.png";
 import img6 from "../../../src/images/pro3.png";
-import { Stack,Box } from "@mui/material";
-import Button from '@mui/material/Button';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { Stack, Box } from "@mui/material";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const Project = () => {
   const Data = [
     {
@@ -55,29 +55,56 @@ const Project = () => {
   ];
   return (
     <Stack direction={"column"} rowGap={3} p={1}>
-        <h1 style={{textAlign:"center"}}>YOUR PROJECT. OUR SOLUTION.</h1>
-    {
-        Data.map((item,i)=>{
-            return(
-                <Stack key={i} width={{xs:"100%",md:"70%"}} mx={"auto"} sx={{backgroundColor:`${item.bgcolor}`,borderRadius:"15px"}} direction={{md:"column"}} justifyContent={"space-between"} p={5} >
-              <Stack direction={{xs:"column",md:"row"}} mx={"auto"} justifyContent={"space-between"}>
-              <Box width={{xs:"100%",md:"50%",lg:"40%"}} mt={{md:0,lg:4}} data-aos="fade-right">
-                <h1 style={{color:"white"}}>{item.title}</h1>
-                <span  style={{color:"white"}}>{item.des}</span>
-                </Box>
-                <Box width={{xs:"100%",md:"50%"}} order={{xs:'-1',md:'0'}} data-aos="fade-left">
-                <img style={{width:"100%"}} src={item.img}/>
-                </Box>
-                </Stack>
-                 <Button  sx={{width:"200px",marginTop:"15px",color:"white",border:"1px solid white"}} variant="outlined" endIcon={<ArrowRightAltIcon  />}>
-                  View case study
-                 </Button>
-                 </Stack>
-            )
-        })
-    }
+      <h1 style={{ textAlign: "center" }}>YOUR PROJECT. OUR SOLUTION.</h1>
+      {Data.map((item, i) => {
+        return (
+          <Stack
+            key={i}
+            width={{ xs: "80%", md: "70%" }}
+            mx={"auto"}
+            sx={{ backgroundColor: `${item.bgcolor}`, borderRadius: "15px" }}
+            direction={{ md: "column" }}
+            justifyContent={"space-between"}
+            p={5}
+          >
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              mx={"auto"}
+              justifyContent={"space-between"}
+            >
+              <Box
+                width={{ xs: "100%", md: "50%" }}
+                mt={{ md: 0, lg: 4 }}
+                data-aos="fade-right"
+              >
+                <h1 style={{ color: "white" }}>{item.title}</h1>
+                <span style={{ color: "white" }}>{item.des}</span>
+              </Box>
+              <Box
+                width={{ xs: "100%", md: "50%" }}
+                order={{ xs: "-1", md: "0" }}
+                data-aos="fade-left"
+              >
+                <img style={{ width: "100%" }} src={item.img} />
+              </Box>
+            </Stack>
+            <Button
+              sx={{
+                width: "200px",
+                marginTop: "15px",
+                color: "white",
+                border: "1px solid white",
+              }}
+              variant="outlined"
+              endIcon={<ArrowRightAltIcon />}
+            >
+              View case study
+            </Button>
+          </Stack>
+        );
+      })}
     </Stack>
-  )
+  );
 };
 
 export default Project;

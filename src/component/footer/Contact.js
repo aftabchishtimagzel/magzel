@@ -6,7 +6,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const form = useRef();
@@ -14,24 +14,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_8c6y8x7', 'template_sd5b7zp', form.current, 'XTHgEN1KsV08wAQJw')
-      .then((result) => {
-        // alert("message sent successfully")
-        console.log(result.text);
-        form.current.reset(); // reset the form fields after successful submission
-        setSnackbarOpen(true); // show the snackbar message
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs
+      .sendForm(
+        "service_8c6y8x7",
+        "template_sd5b7zp",
+        form.current,
+        "XTHgEN1KsV08wAQJw"
+      )
+      .then(
+        (result) => {
+          // alert("message sent successfully")
+          console.log(result.text);
+          form.current.reset(); // reset the form fields after successful submission
+          setSnackbarOpen(true); // show the snackbar message
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);
   };
 
- 
-  
-   
   const award = [
     {
       id: 1,
@@ -84,9 +90,15 @@ const Contact = () => {
         p={2}
         justifyContent={"space-between"}
       >
-        <Stack width={{ xs: '100%', md: '40%' }}>
-          <Box component="form" noValidate ref={form} onSubmit={handleSubmit} sx={{ mt: 3 }} data-aos="fade-up"
-     >
+        <Stack width={{ xs: "100%", md: "40%" }}>
+          <Box
+            component="form"
+            noValidate
+            ref={form}
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
+            data-aos="fade-up"
+          >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -141,12 +153,19 @@ const Contact = () => {
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
+                  control={
+                    <Checkbox value="allowExtraEmails" color="primary" />
+                  }
                   label="I want to receive inspiration, marketing promotions and updates via email."
                 />
               </Grid>
             </Grid>
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
               Submit
             </Button>
           </Box>
@@ -158,7 +177,7 @@ const Contact = () => {
             <Alert
               onClose={handleSnackbarClose}
               severity="success"
-              sx={{ width: '100%' }}
+              sx={{ width: "100%" }}
             >
               Your message has been sent!
             </Alert>
@@ -167,11 +186,8 @@ const Contact = () => {
         <Grid container width={{ xs: "100%", md: "50%" }}>
           {award.map((action) => {
             return (
-          <Grid item xs={6} md={4} data-aos="fade-down"
-          >
-           
+              <Grid item xs={6} md={4} data-aos="fade-down">
                 <img style={{ width: "180px" }} src={action.url} alt="image" />
-             
               </Grid>
             );
           })}

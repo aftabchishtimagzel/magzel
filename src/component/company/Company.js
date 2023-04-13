@@ -5,12 +5,12 @@ import Work from "./Work";
 import Award from "../home/Award";
 import Download from "./Download";
 import Team from "./Team";
-import img from "../../../src/images/blog/company.jpg"
+import img from "../../../src/images/blog/company.jpg";
 const Company = () => {
   return (
-    <div style={{backgroundColor:"#F1F4FD"}}>
+    <div style={{ backgroundColor: "#F1F4FD" }}>
       <BannerMain
-      img={img}
+        img={img}
         title={"Who We Are"}
         title1={
           "Magzel is a software engineering company, a band of experienced and enthusiastic developers, designers, analysts, and managers."
@@ -22,11 +22,11 @@ const Company = () => {
           "The end-to-end delivery approach guided by the proprietary framework SDPDF™ allows the сlient to receive fully functioning software even if all they have is an idea."
         }
       />
-      <Facts/>
-      <Work/>
-      <Download/>
-      <Award/>
-      <Team/>
+      <Facts />
+      <Work />
+      <Download />
+      <Award />
+      <Team />
     </div>
   );
 };
