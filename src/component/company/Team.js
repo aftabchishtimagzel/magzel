@@ -44,7 +44,7 @@ const Team = () => {
                 Data.map((item,i)=>{
                     return(
          
-                     <Grid  key={i} item xs={12} sm={6} md={2.9}>
+                     <Grid  key={i} item xs={12} sm={6} md={2.9} data-aos="fade-up">
 
                     <BlogCard team={"team"} img={item.img} title={item.title} des={item.des}/> 
                     </Grid>

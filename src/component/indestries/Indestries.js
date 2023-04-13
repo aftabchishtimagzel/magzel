@@ -17,7 +17,7 @@ function Indestries() {
             <Grid container width={{ md: '70%', xs: '90%' }} mx={'auto'} spacing={2} mt={2} pb={5} >
                 {indestriesdata.map((item) => {
                     return (
-                        <Grid item md="4" sm='6' xs="12">
+                        <Grid item md="4" sm='6' xs="12" data-aos="zoom-in">
                             <Card sx={{
                                 cursor: 'pointer', padding: '10px', borderRadius: '15px',
                                 ":hover": {

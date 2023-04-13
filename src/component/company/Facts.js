@@ -34,7 +34,7 @@ const Facts = () => {
 {
     Data.map((item)=>{
         return(
-<Grid item xs={12} sm={6} md={4} textAlign={"center"} >
+<Grid item xs={12} sm={6} md={4} textAlign={"center"} data-aos="zoom-in" >
 
 <h1 style={{color:"red",fontSize:"3rem",fontWeight:"800"}}>{item.number}</h1>
 <span>{item.txt}</span>

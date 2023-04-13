@@ -85,7 +85,8 @@ const Contact = () => {
         justifyContent={"space-between"}
       >
         <Stack width={{ xs: '100%', md: '40%' }}>
-          <Box component="form" noValidate ref={form} onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate ref={form} onSubmit={handleSubmit} sx={{ mt: 3 }} data-aos="fade-up"
+     >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -166,7 +167,8 @@ const Contact = () => {
         <Grid container width={{ xs: "100%", md: "50%" }}>
           {award.map((action) => {
             return (
-          <Grid item xs={6} md={4}>
+          <Grid item xs={6} md={4} data-aos="fade-down"
+          >
            
                 <img style={{ width: "180px" }} src={action.url} alt="image" />
              
