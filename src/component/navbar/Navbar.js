@@ -21,10 +21,18 @@ function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [activeMenuItem, setActiveMenuItem] = React.useState(null); // Add state for active menu item
+  const [homeClicked, setHomeClicked] = React.useState(false); 
+
+  const handleHomeClick = () => {
+    setActiveMenuItem(null); // Reset active state
+    setHomeClicked(true); // Set home clicked state
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -108,7 +116,11 @@ function Header(props) {
           }}
         >
           <Box sx={{ flexGrow: 1 }}>
-            <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            <Link to="/"
+              style={{ textDecoration: "none", color: "black" }}
+              onClick={handleHomeClick} // Add onClick function to handle home click
+
+            >
               <img
                 src={logo}
                 alt=""
