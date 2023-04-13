@@ -1,4 +1,7 @@
 import React from "react";
+import AnimatedText from 'react-animated-text-content';
+
+
 import { Box, Button, Typography } from "@mui/material";
 function Banner2(props) {
   return (
@@ -46,7 +49,26 @@ function Banner2(props) {
               fontWeight: { md: "800", xs: "500" },
             }}
           >
-            {props.title2}
+          
+            <AnimatedText
+  type="words" // animate words or chars
+  animation={{
+    x: '200px',
+    y: '-20px',
+    scale: 1.1,
+    ease: 'ease-in-out',
+  }}
+  animationType="float"
+  interval={0.3}
+  duration={0.4}
+  tag="p"
+  className="animated-paragraph"
+  includeWhiteSpaces
+  threshold={0.3}
+  rootMargin="20%"
+>
+{props.title2}
+</AnimatedText>
           </Typography>
 
           <Typography
@@ -58,7 +80,8 @@ function Banner2(props) {
               width: { xs: "100%", md: "50%" },
             }}
           >
-            {props.disc}
+
+{props.disc}    
           </Typography>
           {props.button ? (
             <a href="#contact" style={{ textDecoration: "none" }}>

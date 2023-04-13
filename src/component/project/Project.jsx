@@ -60,7 +60,7 @@ const Project = () => {
         return (
           <Stack
             key={i}
-            width={{ xs: "70%",sm:"80", md: "70%" }}
+            width={{ xs: "90%", md: "70%" }}
             mx={"auto"}
             sx={{ backgroundColor: `${item.bgcolor}`, borderRadius: "15px" }}
             direction={{ md: "column" }}
@@ -75,7 +75,7 @@ const Project = () => {
               <Box
                 width={{ xs: "100%", md: "50%" }}
                 mt={{ md: 0, lg: 4 }}
-                data-aos="fade-right"
+                data-aos="zoom-in-down"
               >
                 <h1 style={{ color: "white" }}>{item.title}</h1>
                 <span style={{ color: "white" }}>{item.des}</span>
@@ -83,7 +83,8 @@ const Project = () => {
               <Box
                 width={{ xs: "100%", md: "50%" }}
                 order={{ xs: "-1", md: "0" }}
-                data-aos="fade-left"
+           
+                data-aos="zoom-in-up"
               >
                 <img style={{ width: "100%" }} src={item.img} />
               </Box>
