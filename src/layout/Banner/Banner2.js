@@ -59,7 +59,7 @@ function Banner2(props) {
     ease: 'ease-in-out',
   }}
   animationType="float"
-  interval={0.3}
+  interval={0.1}
   duration={0.4}
   tag="p"
   className="animated-paragraph"

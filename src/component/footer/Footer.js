@@ -32,7 +32,7 @@ const Footer = () => {
                             </Link>
                         </Box>
                         <Typography mt={5} display={{ xs: 'none', md: 'block' }}>
-                            +44 208 089 9049
+                        +923344826000
                         </Typography>
                       
                     </Grid>
