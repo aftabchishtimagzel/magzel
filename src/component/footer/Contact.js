@@ -1,5 +1,5 @@
-import { Button, Stack } from "@mui/material";
-import React, { useRef } from "react";
+import { Alert, Button, Snackbar, Stack } from "@mui/material";
+import React, { useRef, useState } from "react";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -10,6 +10,7 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const form = useRef();
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,9 +19,14 @@ const Contact = () => {
         // alert("message sent successfully")
         console.log(result.text);
         form.current.reset(); // reset the form fields after successful submission
+        setSnackbarOpen(true); // show the snackbar message
       }, (error) => {
         console.log(error.text);
       });
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
   };
 
  
@@ -78,14 +84,8 @@ const Contact = () => {
         p={2}
         justifyContent={"space-between"}
       >
-        <Stack width={{ xs: "100%", md: "40%" }}>
-          <Box
-            component="form"
-            noValidate
-            ref={form}
-            onSubmit={handleSubmit}
-            sx={{ mt: 3 }}
-          >
+        <Stack width={{ xs: '100%', md: '40%' }}>
+          <Box component="form" noValidate ref={form} onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -108,25 +108,24 @@ const Contact = () => {
                   autoComplete="family-name"
                 />
               </Grid>
-
               <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
+                  id="number"
                   label="Phone Number"
                   name="number"
-                  autoComplete="family-name"
+                  autoComplete="tel"
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
+                  id="company"
                   label="Company"
                   name="company"
-                  autoComplete="family-name"
+                  autoComplete="organization"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -139,25 +138,30 @@ const Contact = () => {
                   autoComplete="email"
                 />
               </Grid>
-
               <Grid item xs={12}>
                 <FormControlLabel
-                  control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
-                  }
+                  control={<Checkbox value="allowExtraEmails" color="primary" />}
                   label="I want to receive inspiration, marketing promotions and updates via email."
                 />
               </Grid>
             </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
+            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
               Submit
             </Button>
           </Box>
+          <Snackbar
+            open={snackbarOpen}
+            autoHideDuration={3000}
+            onClose={handleSnackbarClose}
+          >
+            <Alert
+              onClose={handleSnackbarClose}
+              severity="success"
+              sx={{ width: '100%' }}
+            >
+              Your message has been sent!
+            </Alert>
+          </Snackbar>
         </Stack>
         <Grid container width={{ xs: "100%", md: "50%" }}>
           {award.map((action) => {
