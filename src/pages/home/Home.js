@@ -1,18 +1,24 @@
 import React from 'react'
-import SliderMain from '../../component/home/SliderMain'
 import Services from '../../component/services/Services'
 import Award from '../../component/home/Award'
 import Indestries from '../../component/indestries/Indestries'
 import Stories from '../../component/stories/Stories'
 import Ceo from '../../component/indestries/Ceo'
-
+import Banner2 from '../../layout/Banner/Banner2'
+import bannerimg from '../../images/home-background.jpg'
 
 
 function Home() {
   return (
     <div style={{ backgroundColor:'#f1f4fd'}}>
       
-      <SliderMain />
+      {/* <SliderMain /> */}
+      <Banner2
+        title={"Custom Software Development Company"}
+        title2={" We are Experienced in the development of BlockchainWeb 3.0AppsWeb"}
+        disc={"Magzel is one of the pioneers in web 3.0 development"}
+        button={"Let's talk"}
+        image={bannerimg } />
       <Services />
       <Award />
       <Indestries />

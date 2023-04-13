@@ -3,32 +3,54 @@ import React from 'react'
 
 function Banner1(props) {
     return (
-        <Box sx={{ bgcolor: 'white' }} pb={5}>  
-            <Grid container spacing={3} width={{ md:"70%",xs:'98%'}} mx={'auto'} mb={5} mt={5} >
-                
+        <Box sx={{ bgcolor: 'white' }} pb={5}>
+            <Grid container spacing={3} width={{ md: "70%", xs: '98%' }} alignItems={"center"} mx={'auto'} mb={5} mt={5} >
+
                 {/* =================text===================== */}
-          <Grid item md={6} xs={12}>
-              <Box>
-                  <Typography variant="h2" style={{ color: 'black', marginBottom: '1rem', fontWeight: { md: 800, xs: 500 }}}>
-                    {props.title}
-                  </Typography>
-                  <Typography variant="h4" style={{ color: 'black', marginBottom: '1rem', fontWeight: { md: 800, xs: 500 }}}>
-                      {props.head}
-                  </Typography>
-                  <Typography variant="body1" style={{ color: 'black', fontSize: '1.25em' }}>
-                      {props.disc}
-                  </Typography>
-              </Box>
+                <Grid item md={6} xs={12}>
+                    <Box>
+                        <Typography variant="h2"
+                            sx={{
+                                color: 'black',
+                                marginBottom: '1rem',
+                                fontWeight: { md: 700, xs: 500 },
+                                fontSize: { xs: '2rem', sm:'2.5rem'},
+                            }}>
+                            {props.title}
+                        </Typography>
+                        <Typography variant="h4"
+                            sx={{
+                             
+                                color: 'black',
+                                marginBottom: '1rem',
+                                fontWeight: { md: 800, xs: 500 },
+                                fontSize: '1.5rem',
+                            }}>
+                            {props.head}
+                        </Typography>
+                        <Typography variant="body1"
+                            sx={{
+                                width: { xs: '90%', sm: '100%' },
+                                textAlign:'justify',
+                                color: 'black',
+                                fontSize: '1.25em',
+                                lineHeight: '1.5',
+                                fontSize: {xs:'1rem',sm:'1.1rem'},
+                               
+                            }}>
+                            {props.disc}
+                        </Typography>
+                    </Box>
                 </Grid>
 
                 {/* =================image===================== */}
                 <Grid item md={6} xs={12} order={{ xs: '-1', md: '0' }}>
-                    <img src={props.image} alt="web" width={"100%"} height={"auto"} style={{ animation: "moveUpDown 2s ease-in-out infinite", }}  />
+                    <img src={props.image} alt="web" width={"100%"} height={"auto"}  />
                 </Grid>
 
-     </Grid >
+            </Grid>
         </Box>
-  )
+    )
 }
 
 export default Banner1

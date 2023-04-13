@@ -30,8 +30,8 @@ const programedata = [
 function MainPrograme() {
     return (
         <>
-            <Box mt={5} mb={5}>
-                <Grid container spacing={10} width={{ xs: '90%', md: '70%' }} mx={'auto'}>
+            <Box pt={5} mb={5}>
+                <Grid container spacing={6} width={{ xs: '95%', md: '70%' }} mx={'auto'}>
                     {programedata.map((item) => {
                         return (
                             <Grid item md={4} xs={12}>
