@@ -15,7 +15,7 @@ const Contact = () => {
     e.preventDefault();
     emailjs.sendForm('service_8c6y8x7', 'template_sd5b7zp', form.current, 'XTHgEN1KsV08wAQJw')
       .then((result) => {
-        alert("message sent successfully")
+        // alert("message sent successfully")
         console.log(result.text);
         form.current.reset(); // reset the form fields after successful submission
       }, (error) => {
