@@ -16,7 +16,7 @@ function Home() {
       <Banner2
         title={"We are a Web 3.0 Development Company"}
         title2={" We are Experienced in the development of "}
-        disc={"Magzel(pvt) is one of the pioneers in web 3.0 development"}
+        disc={"Magzel (pvt) Limited is one of the pioneers in web 3.0 development"}
         button={"Let's talk"}
         image={bannerimg } />
       <Services />
