@@ -44,7 +44,6 @@ function Banner1(props) {
                 width: { xs: "90%", sm: "100%" },
                 textAlign: "justify",
                 color: "black",
-                fontSize: "1.25em",
                 lineHeight: "1.5",
                 fontSize: { xs: "1rem", sm: "1.1rem" },
               }}

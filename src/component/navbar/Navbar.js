@@ -22,7 +22,7 @@ function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [activeMenuItem, setActiveMenuItem] = React.useState(null); // Add state for active menu item
   const [homeClicked, setHomeClicked] = React.useState(false); 
-
+ 
   const handleHomeClick = () => {
     setActiveMenuItem(null); // Reset active state
     setHomeClicked(true); // Set home clicked state

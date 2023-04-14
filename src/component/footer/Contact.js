@@ -3,7 +3,6 @@ import React, { useRef, useState } from "react";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import emailjs from "emailjs-com";
@@ -187,7 +186,7 @@ const Contact = () => {
           {award.map((action) => {
             return (
               <Grid item xs={6} md={4} data-aos="fade-down">
-                <img style={{ width: "180px" }} src={action.url} alt="image" />
+                <img style={{ width: "180px" }} src={action.url} alt="i" />
               </Grid>
             );
           })}

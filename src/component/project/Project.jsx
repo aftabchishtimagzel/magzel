@@ -86,7 +86,7 @@ const Project = () => {
            
                 data-aos="zoom-in-up"
               >
-                <img style={{ width: "100%" }} src={item.img} />
+                <img style={{ width: "100%" }} src={item.img}  alt=""/>
               </Box>
             </Stack>
             <Button

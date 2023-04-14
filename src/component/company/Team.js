@@ -82,7 +82,7 @@ const Team = () => {
           </Button>
         </Stack>
         <Stack width={{ xs: "100%", md: "50%" }}>
-          <img src={img5} />
+          <img src={img5} alt="" />
         </Stack>
       </Stack>
     </>

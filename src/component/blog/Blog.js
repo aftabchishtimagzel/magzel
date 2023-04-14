@@ -61,7 +61,7 @@ export default function BasicTabs() {
         >
           <Stack marginTop={2} p={1}>
             <input
-              style={{ border: "none", padding: "7px", borderRadius: "15px",border:"1px solid gray" }}
+              style={{  padding: "7px", borderRadius: "15px",border:"1px solid gray" }}
               type="text"
               placeholder="find Article..."
             />
