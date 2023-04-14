@@ -1,40 +1,31 @@
-import { Alert, Button, Snackbar, Stack } from "@mui/material";
-import React, { useRef, useState } from "react";
+import {  Button,  Stack } from "@mui/material";
+import React from "react";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const form = useRef();
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_8c6y8x7",
-        "template_sd5b7zp",
-        form.current,
-        "XTHgEN1KsV08wAQJw"
-      )
-      .then(
-        (result) => {
-          // alert("message sent successfully")
-          console.log(result.text);
-          form.current.reset(); // reset the form fields after successful submission
-          setSnackbarOpen(true); // show the snackbar message
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+    // Extract form data
+    const formData = new FormData(event.target);
+    const fullname = formData.get("fullname");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-  const handleSnackbarClose = () => {
-    setSnackbarOpen(false);
+    // Construct email body
+    const emailBody = `Full Name: ${fullname}%0D%0A%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+
+    // Construct mailto link
+    const subject = "New Contact Form Submission";
+    const mailToLink = `mailto:rizorizvi928@gmail.com?subject=${subject}&body=${emailBody}`;
+
+    // Open user's default email client with pre-filled email
+    window.location.href = mailToLink;
+
+    // Reset form fields and show confirmation message
+    event.target.reset();
   };
 
   const award = [
@@ -93,7 +84,6 @@ const Contact = () => {
           <Box
             component="form"
             noValidate
-            ref={form}
             onSubmit={handleSubmit}
             sx={{ mt: 3 }}
             data-aos="fade-up"
@@ -105,7 +95,7 @@ const Contact = () => {
                   name="fullname"
                   required
                   fullWidth
-                  id="firstName"
+                  id="fullname"
                   label="Full Name"
                   autoFocus
                 />
@@ -144,19 +134,6 @@ const Contact = () => {
               Submit
             </Button>
           </Box>
-          <Snackbar
-            open={snackbarOpen}
-            autoHideDuration={3000}
-            onClose={handleSnackbarClose}
-          >
-            <Alert
-              onClose={handleSnackbarClose}
-              severity="success"
-              sx={{ width: "100%" }}
-            >
-              Your message has been sent!
-            </Alert>
-          </Snackbar>
         </Stack>
         <Grid container width={{ xs: "100%", md: "50%" }}>
           {award.map((action) => {
