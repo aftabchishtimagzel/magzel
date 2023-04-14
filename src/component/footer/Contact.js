@@ -122,13 +122,15 @@ const Contact = () => {
               </Grid>
                <Grid item xs={12} >
                 <textarea
-                style={{width:"100%",padding:"10px",height:"80px"}}
+                style={{width:"100%",padding:"10px",resize:"none"}}
                   required
+                  rows={5}
                   fullWidth
                   id="company"
                   placeholder="Write Message?"
                   name="message"
                   autoComplete="organization"
+                
                 />
               </Grid>
             
