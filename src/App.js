@@ -5,11 +5,9 @@ import Routing from './routes/index'
 const App = () => {
   return (
     <>
-
       <BrowserRouter>
         <Routing />
       </BrowserRouter>
-
     </>
   )
 }

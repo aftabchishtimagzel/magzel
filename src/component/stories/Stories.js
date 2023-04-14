@@ -8,6 +8,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { Grid, Stack } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { NavLink } from 'react-router-dom';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -89,9 +90,10 @@ function Stories() {
                                     }} >
                                         {item.dis}
                                     </Typography>
+                                    <NavLink to="/project"  style={{textDecoration:'none'}}>
                                     <Button sx={{
                                         color: '#db517c', gap: '4px', fontSize: '16px'
-                                    }} mt={2}>Learn More  <ArrowRightAltIcon sx={{ fontSize: '40px' }} /></Button>
+                                    }} mt={2}>Learn More  <ArrowRightAltIcon sx={{ fontSize: '40px' }} /></Button></NavLink>
                                 </Grid>
                                 <Grid item md="6" xs={12} order={{xs:-1,md:0}}>
                                     <Stack direction="row" spacing={2} width={{xs:'70%',md:'100%'}} mx={'auto'}>

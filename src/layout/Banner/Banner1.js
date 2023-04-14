@@ -14,7 +14,7 @@ function Banner1(props) {
         mt={5}
       >
         {/* =================text===================== */}
-        <Grid item md={6} xs={12}>
+        <Grid item md={6} xs={11}>
           <Box data-aos="zoom-in">
             <Typography
               variant="h2"
@@ -54,7 +54,7 @@ function Banner1(props) {
         </Grid>
 
         {/* =================image===================== */}
-        <Grid item md={6} xs={12} order={{ xs: "-1", md: "0" }} data-aos="zoom-out">
+        <Grid item md={6} xs={11} order={{ xs: "-1", md: "0" }} data-aos="zoom-out">
           <img src={props.image} alt="web" width={"100%"} height={"auto"} />
         </Grid>
       </Grid>

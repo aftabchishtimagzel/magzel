@@ -57,11 +57,13 @@ function Services() {
                           {item.disc}
                         </Typography>
                     </CardContent>
+               
                     <CardActions>
                             <Button  sx={{
                                 color: '#db517c',gap:'4px' ,fontSize:'16px'
                             }}>Learn More  <ArrowRightAltIcon sx={{ fontSize: '40px' }} /></Button>
                     </CardActions>
+                      
                                 </Card>
                             </NavLink>
             </Grid>
