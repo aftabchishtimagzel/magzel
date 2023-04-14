@@ -33,7 +33,7 @@ function Services() {
                             boxShadow: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px'
                     }}}>
                                 <CardContent>
-                                    <Box mb={2} sx={{ color: '#f5a00a' }}>
+                                    <Box mb={2} sx={{ color: 'black' }}>
                                         {item.icon}
                                     </Box>
                             <Typography variant="h3" component="div" sx={{

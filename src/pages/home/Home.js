@@ -14,9 +14,9 @@ function Home() {
       
       {/* ================banner2=================*/}
       <Banner2
-        title={"Custom Software Development Company"}
-        title2={" We are Experienced in the development of BlockchainWeb 3.0AppsWeb"}
-        disc={"Magzel is one of the pioneers in web 3.0 development"}
+        title={"We are a Web 3.0 Development Company"}
+        title2={" We are Experienced in the development of "}
+        disc={"Magzel(pvt) is one of the pioneers in web 3.0 development"}
         button={"Let's talk"}
         image={bannerimg } />
       <Services />

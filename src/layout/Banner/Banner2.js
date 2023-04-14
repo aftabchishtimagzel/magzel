@@ -2,6 +2,7 @@ import React from "react";
 import AnimatedText from "react-animated-text-content";
 
 import { Box, Button, Typography } from "@mui/material";
+import TextAnimation from "react-text-animations";
 function Banner2(props) {
   return (
     <div style={{ position: "relative", height: "83vh" }}>
@@ -30,43 +31,34 @@ function Banner2(props) {
       >
         <Box sx={{ width: { md: "70%", xs: "90%" } }}>
           <Typography
-            variant="h4"
+            variant="h5"
             sx={{
               color: "#fff",
               width: { xs: "100%", md: "50%" },
-              marginBottom: "1rem",
+               marginBottom: "1rem",
               fontWeight: { md: "800", xs: "500" },
             }}
           >
             {props.title}
           </Typography>
           <Typography
-            variant="h6"
+            variant="h4"
             sx={{
               color: "#fff",
-              marginBottom: "1rem",
-              fontWeight: { md: "800", xs: "500" },
+              // marginBottom: "1rem",
+              width: { xs: "100%", md: "40%" },
+              fontWeight: { md: "700", xs: "500" },
             }}
           >
-            <AnimatedText
-              type="words" // animate words or chars
-              animation={{
-                x: "200px",
-                y: "-20px",
-                scale: 1.1,
-                ease: "ease-in-out",
-              }}
-              animationType="float"
-              interval={0.1}
-              duration={0.4}
-              tag="p"
-              className="animated-paragraph"
-              includeWhiteSpaces
-              threshold={0.3}
-              rootMargin="20%"
-            >
-              {props.title2}
-            </AnimatedText>
+            {
+              props.title2 ?
+             
+            
+            <TextAnimation.Slide target="Web" text={["Blockchain", "Web 3.0", "Apps", "Web"]} >
+                 {props.title2}  
+                </TextAnimation.Slide> :
+                props.title3
+         }
           </Typography>
 
           <Typography
