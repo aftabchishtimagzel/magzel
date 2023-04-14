@@ -99,45 +99,15 @@ const Contact = () => {
             data-aos="fade-up"
           >
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} >
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="fullname"
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="Full Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="number"
-                  label="Phone Number"
-                  name="number"
-                  autoComplete="tel"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="company"
-                  label="Company"
-                  name="company"
-                  autoComplete="organization"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -150,14 +120,18 @@ const Contact = () => {
                   autoComplete="email"
                 />
               </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
-                  }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+               <Grid item xs={12} >
+                <textarea
+                style={{width:"100%",padding:"10px",height:"80px"}}
+                  required
+                  fullWidth
+                  id="company"
+                  placeholder="Write Message?"
+                  name="message"
+                  autoComplete="organization"
                 />
               </Grid>
+            
             </Grid>
             <Button
               type="submit"
