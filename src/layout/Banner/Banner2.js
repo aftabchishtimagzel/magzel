@@ -1,6 +1,4 @@
 import React from "react";
-import AnimatedText from "react-animated-text-content";
-
 import { Box, Button, Typography } from "@mui/material";
 import TextAnimation from "react-text-animations";
 function Banner2(props) {

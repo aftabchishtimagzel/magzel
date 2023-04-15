@@ -64,7 +64,7 @@ const BannerMain = (props) => {
             >
               {props.title2}
             </p>
-            {props.title3 ? (
+            {props.title3 ? 
               <p
                 style={{
                   color: "white ",
@@ -73,7 +73,7 @@ const BannerMain = (props) => {
               >
                 {props.title3}
               </p>
-            ) : (
+             : 
               <Button
                 variant="contained"
                 sx={{
@@ -90,7 +90,7 @@ const BannerMain = (props) => {
                 {" "}
                 Let's talk
               </Button>
-            )}
+            }
           </Box>
         </Box>
       </div>
