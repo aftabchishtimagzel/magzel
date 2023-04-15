@@ -1,5 +1,5 @@
-import { Grid, Box, Stack, Divider, Typography } from '@mui/material'
-import React from 'react'
+import { Grid, Box, Stack, Divider, Typography, IconButton } from '@mui/material'
+import React, { useState } from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -8,7 +8,19 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png'
 import moment from 'moment/moment';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 const Footer = () => {
+    const [showButton, setShowButton] = useState(false);
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 200) {
+            setShowButton(true);
+        } else {
+            setShowButton(false);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
     return (
         <>
 
@@ -142,6 +154,12 @@ const Footer = () => {
                      </Stack>
                    
                 </Box>
+            </Box>
+            <Box position="fixed" bottom={10} right={10} sx={{ display: showButton ? 'block' : 'none' }}>
+                <IconButton onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="back to top">
+                    <ArrowCircleUpIcon sx={{ color: '#fcd043 ',fontSize:'50px'}} />
+                 
+                </IconButton>
             </Box>
         </>
     )
