@@ -19,7 +19,7 @@ const Contact = () => {
 
     // Construct mailto link
     const subject = "New Contact Form Submission";
-    const mailToLink = `mailto:rizorizvi928@gmail.com?subject=${subject}&body=${emailBody}`;
+    const mailToLink = `mailto:info@magzel.com?subject=${subject}&body=${emailBody}`;
 
     // Open user's default email client with pre-filled email
     window.location.href = mailToLink;

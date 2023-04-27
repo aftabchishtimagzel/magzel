@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo.png'
+import logo from '../../images/logo/Magzel_logo.png'
 import moment from 'moment/moment';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 const Footer = () => {
@@ -30,17 +30,20 @@ const Footer = () => {
                 <Grid container spacing={4} width={'98%'} mx={'auto'} mb={5} padding={"10px 0px"} >
                     {/* logo */}
                     <Grid item lg={2.4} xs={12}>
-                        <Box sx={{ bgcolor: 'white' ,width:'180px'}}>
+                        <Box >
                             <Link to='/' style={{
                                 textDecoration: 'none',
                                 color: 'white',
 
                             }}>
 
-                                < img width={'100%'} height={"50px"} src={logo} alt="" style={{
-                                    objectFit: 'cover',
-                                    marginBottom: '-15px'
-                                }} />
+                                <img
+                                    src={logo}
+                                    alt=""
+                                    width={{ md: "200px", xs: "150px" }}
+                                    height="50px"
+                                    style={{ objectFit: "cover",marginLeft:'25px' }}
+                                />
                             </Link>
                         </Box>
                         <Typography mt={5} display={{ xs: 'none', md: 'block' }}>

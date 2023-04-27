@@ -13,7 +13,7 @@ import Button from "@mui/material/Button";
 import { navItems } from "./Data";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo/Magzel_logo.png";
 
 const drawerWidth = 300;
 
@@ -37,8 +37,9 @@ function Header(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Box
+        
         // variant="h5"
-        sx={{ my: 2 }}
+        sx={{ py: 2,background:'black'}}
       >
         <Link
           to="/"
@@ -55,6 +56,7 @@ function Header(props) {
             style={{
               objectFit: "cover",
               marginBottom: "-15px",
+             
             }}
           />
         </Link>
@@ -104,7 +106,7 @@ function Header(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "white", color: "black", padding: "10px 0px" }}
+        sx={{ backgroundColor: "black", color: "white", padding: "10px 0px" }}
       >
         <Box
           sx={{
@@ -126,7 +128,7 @@ function Header(props) {
                 alt=""
                 width={{ md: "200px", xs: "150px" }}
                 height="50px"
-                style={{ objectFit: "cover", marginBottom: "-15px" }}
+                style={{ objectFit: "cover"}}
               />
             </Link>
           </Box>
@@ -146,7 +148,7 @@ function Header(props) {
                     marginRight: "5px",
                     borderRadius: "0px",
                     fontWeight: "600",
-                    color: "black",
+                    color: "white",
                     ":hover": {
                       borderBottom: "2px solid red",
                     },
