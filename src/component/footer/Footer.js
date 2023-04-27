@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/logo/Magzel_logo.png'
 import moment from 'moment/moment';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 const Footer = () => {
     const [showButton, setShowButton] = useState(false);
 
@@ -46,8 +47,11 @@ const Footer = () => {
                                 />
                             </Link>
                         </Box>
-                        <Typography mt={5} display={{ xs: 'none', md: 'block' }}>
-                        +923344826000
+                        <Typography mt={3} display={{ xs: 'none', md: 'block' }}>
+                            <a href="tel:+923344826000" style={{ color: 'white', textDecoration: 'none' }}>+92-334-4826-000</a>  
+                        </Typography>
+                        <Typography  display={{ xs: 'none', md: 'block' }} mt={2}>
+                            <a href="mailto:info@magzel.com" style={{color:'white',textDecoration:'none'}}>  <MailOutlineIcon sx={{marginBottom:'-6px'}} />  info@magzel.com</a>
                         </Typography>
                       
                     </Grid>

@@ -9,10 +9,10 @@ function ServicesDetail() {
     return (
         <>
             <Box width={{ xs: '95%', md: '80%' }} mx={'auto'} mt={5}>
-                <NavLink to="/services" style={{ color: "#db5156", textDecoration: 'none' }}>
+                <NavLink to="/services" style={{ color: "#db5156", textDecoration: 'none' ,}}>
                     <Stack direction={"row"} alignItems={"center"} spacing={2} >
-                        <KeyboardBackspaceIcon sx={{ fontSize: '40px' }} />
-                        <Typography fontSize={"20px"}>
+                        <KeyboardBackspaceIcon sx={{ fontSize: '40px', cursor: 'pointer' }} />
+                        <Typography fontSize={"20px"} sx={{ cursor: 'pointer' }}>
                             Back
                         </Typography>
 
