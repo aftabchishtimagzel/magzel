@@ -48,7 +48,7 @@ const Footer = () => {
                             </Link>
                         </Box>
                         <Typography mt={3} display={{ xs: 'none', md: 'block' }}>
-                            <a href="tel:+923344826000" style={{ color: 'white', textDecoration: 'none' }}>+92-334-4826-000</a>  
+                            <a href="tel:+923344826000" style={{ color: 'white', textDecoration: 'none' }}>+92-334-482-6000</a>  
                         </Typography>
                         <Typography  display={{ xs: 'none', md: 'block' }} mt={2}>
                             <a href="mailto:info@magzel.com" style={{color:'white',textDecoration:'none'}}>  <MailOutlineIcon sx={{marginBottom:'-6px'}} />  info@magzel.com</a>
