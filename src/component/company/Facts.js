@@ -36,7 +36,7 @@ const Facts = () => {
           return (
             <Grid
               item
-              xs={12}
+              xs={6}
               sm={6}
               md={4}
               textAlign={"center"}

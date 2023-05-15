@@ -12,8 +12,13 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { navItems } from "./Data";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { Stack, Typography } from "@mui/material";
 import logo from "../../images/Magzel_logo (250 - 150 Px).png";
+=======
+import { Stack } from "@mui/material";
+import logo from "../../images/logo/Magzel_logo.png";
+>>>>>>> ce0a28a652abca71a0df539db5f31a17e90db68e
 
 const drawerWidth = 300;
 
@@ -37,8 +42,9 @@ function Header(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center",backgroundColor:"black",height:"100vh" }}>
       <Box
+        
         // variant="h5"
-        sx={{ my: 2 }}
+        sx={{ py: 2,background:'black'}}
       >
         <Link
           to="/"
@@ -55,6 +61,7 @@ function Header(props) {
             style={{
               objectFit: "cover",
               marginBottom: "-15px",
+             
             }}
           />
         </Link>
@@ -121,7 +128,11 @@ function Header(props) {
       <CssBaseline />
       <AppBar
         component="nav"
+<<<<<<< HEAD
         sx={{ backgroundColor: "black", color: "black", padding: "10px 5px" }}
+=======
+        sx={{ backgroundColor: "black", color: "white", padding: "10px 0px" }}
+>>>>>>> ce0a28a652abca71a0df539db5f31a17e90db68e
       >
         <Box
           sx={{
@@ -143,7 +154,7 @@ function Header(props) {
                 alt=""
                 width={{ md: "200px", xs: "150px" }}
                 height="50px"
-                style={{ objectFit: "cover", marginBottom: "-15px" }}
+                style={{ objectFit: "cover"}}
               />
             </Link>
           </Box>

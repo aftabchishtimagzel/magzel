@@ -6,9 +6,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo.png'
+import logo from '../../images/logo/Magzel_logo.png'
 import moment from 'moment/moment';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 const Footer = () => {
     const [showButton, setShowButton] = useState(false);
 
@@ -30,21 +31,27 @@ const Footer = () => {
                 <Grid container spacing={4} width={'98%'} mx={'auto'} mb={5} padding={"10px 0px"} >
                     {/* logo */}
                     <Grid item lg={2.4} xs={12}>
-                        <Box sx={{ bgcolor: 'white' ,width:'180px'}}>
+                        <Box >
                             <Link to='/' style={{
                                 textDecoration: 'none',
                                 color: 'white',
 
                             }}>
 
-                                < img width={'100%'} height={"50px"} src={logo} alt="" style={{
-                                    objectFit: 'cover',
-                                    marginBottom: '-15px'
-                                }} />
+                                <img
+                                    src={logo}
+                                    alt=""
+                                    width={{ md: "200px", xs: "150px" }}
+                                    height="50px"
+                                    style={{ objectFit: "cover",marginLeft:'25px' }}
+                                />
                             </Link>
                         </Box>
-                        <Typography mt={5} display={{ xs: 'none', md: 'block' }}>
-                        +923344826000
+                        <Typography mt={3} display={{ xs: 'none', md: 'block' }}>
+                            <a href="tel:+923344826000" style={{ color: 'white', textDecoration: 'none' }}>+92-334-482-6000</a>  
+                        </Typography>
+                        <Typography  display={{ xs: 'none', md: 'block' }} mt={2}>
+                            <a href="mailto:info@magzel.com" style={{color:'white',textDecoration:'none'}}>  <MailOutlineIcon sx={{marginBottom:'-6px'}} />  info@magzel.com</a>
                         </Typography>
                       
                     </Grid>
