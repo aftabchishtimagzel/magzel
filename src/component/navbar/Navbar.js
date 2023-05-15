@@ -12,8 +12,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { navItems } from "./Data";
 import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
-import logo from "../../images/logo.png";
+import { Stack, Typography } from "@mui/material";
+import logo from "../../images/Magzel_logo (250 - 150 Px).png";
 
 const drawerWidth = 300;
 
@@ -35,7 +35,7 @@ function Header(props) {
   
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center",backgroundColor:"black",height:"100vh" }}>
       <Box
         // variant="h5"
         sx={{ my: 2 }}
@@ -66,9 +66,26 @@ function Header(props) {
             style={{ color: "white", textDecoration: "none" }}
             key={id}
             to={url}
+            onClick={() => setActiveMenuItem(id)}
           >
             <Stack direction="column" alignItems="center">
-              <p style={{ fontSize: "13px", color: "black" }}>{title}</p>
+            <Button
+                  variant="text"
+                  sx={{
+                    marginRight: "5px",
+                    borderRadius: "0px",
+                    fontWeight: "600",
+                    color: "white",
+                    ":hover": {
+                      borderBottom: "2px solid red",
+                    },
+                    ...(activeMenuItem === id && {
+                      borderBottom: "2px solid red",
+                    }),
+                  }}
+                >
+                  {title}
+                </Button>
             </Stack>
           </Link>
         ))}
@@ -104,7 +121,7 @@ function Header(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "white", color: "black", padding: "10px 0px" }}
+        sx={{ backgroundColor: "black", color: "black", padding: "10px 5px" }}
       >
         <Box
           sx={{
@@ -117,7 +134,7 @@ function Header(props) {
         >
           <Box sx={{ flexGrow: 1 }}>
             <Link to="/"
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "white" }}
               onClick={handleHomeClick} // Add onClick function to handle home click
 
             >
@@ -146,7 +163,7 @@ function Header(props) {
                     marginRight: "5px",
                     borderRadius: "0px",
                     fontWeight: "600",
-                    color: "black",
+                    color: "white",
                     ":hover": {
                       borderBottom: "2px solid red",
                     },
@@ -176,7 +193,7 @@ function Header(props) {
             </a>
           </Box>
           <IconButton
-            color="inherit"
+            color="white"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -187,7 +204,7 @@ function Header(props) {
               borderRadius: "9px",
             }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{color:"white"}}/>
           </IconButton>
         </Box>
       </AppBar>
