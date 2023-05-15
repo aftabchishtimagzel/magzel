@@ -12,13 +12,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { navItems } from "./Data";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Stack, Typography } from "@mui/material";
-import logo from "../../images/Magzel_logo (250 - 150 Px).png";
-=======
 import { Stack } from "@mui/material";
 import logo from "../../images/logo/Magzel_logo.png";
->>>>>>> ce0a28a652abca71a0df539db5f31a17e90db68e
 
 const drawerWidth = 300;
 
@@ -128,11 +123,7 @@ function Header(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-<<<<<<< HEAD
-        sx={{ backgroundColor: "black", color: "black", padding: "10px 5px" }}
-=======
         sx={{ backgroundColor: "black", color: "white", padding: "10px 0px" }}
->>>>>>> ce0a28a652abca71a0df539db5f31a17e90db68e
       >
         <Box
           sx={{
